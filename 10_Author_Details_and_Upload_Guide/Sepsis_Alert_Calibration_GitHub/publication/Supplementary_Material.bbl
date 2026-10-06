@@ -1,0 +1,122 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{reyna}
+M.~A. Reyna, C.~S. Josef, R.~Jeter, S.~P. Shashikumar, M.~B. Westover,
+  S.~Nemati, et~al., {Early Prediction of Sepsis From Clinical Data: The
+  PhysioNet/Computing in Cardiology Challenge 2019}, Crit. Care Med. 48~(2)
+  (2020) 210--217.
+\newblock \href {https://doi.org/10.1097/CCM.0000000000004145}
+  {\path{doi:10.1097/CCM.0000000000004145}}.
+
+\bibitem{wong}
+A.~Wong, E.~Otles, J.~P. Donnelly, A.~Krumm, J.~McCullough, O.~DeTroyer-Cooley,
+  et~al., {External Validation of a Widely Implemented Proprietary Sepsis
+  Prediction Model in Hospitalized Patients}, JAMA Intern. Med. 181~(8) (2021)
+  1065--1070.
+\newblock \href {https://doi.org/10.1001/jamainternmed.2021.2626}
+  {\path{doi:10.1001/jamainternmed.2021.2626}}.
+
+\bibitem{composer}
+S.~P. Shashikumar, G.~Wardi, A.~Malhotra, S.~Nemati, {Artificial intelligence
+  sepsis prediction algorithm learns to say ``I don't know''}, NPJ Digit. Med.
+  4~(1) (2021) 134.
+\newblock \href {https://doi.org/10.1038/s41746-021-00504-6}
+  {\path{doi:10.1038/s41746-021-00504-6}}.
+
+\bibitem{moor}
+M.~Moor, N.~Bennett, D.~Plečko, M.~Horn, B.~Rieck, N.~Meinshausen, et~al.,
+  {Predicting sepsis using deep learning across international sites: a
+  retrospective development and validation study}, EClinicalMedicine 62 (2023)
+  102124.
+\newblock \href {https://doi.org/10.1016/j.eclinm.2023.102124}
+  {\path{doi:10.1016/j.eclinm.2023.102124}}.
+
+\bibitem{gupta}
+A.~Gupta, R.~Chauhan, S.~G, A.~Shreekumar, {Improving sepsis prediction in
+  intensive care with SepsisAI: A clinical decision support system with a focus
+  on minimizing false alarms}, PLOS Digit. Health 3~(8) (2024) e0000569.
+\newblock \href {https://doi.org/10.1371/journal.pdig.0000569}
+  {\path{doi:10.1371/journal.pdig.0000569}}.
+
+\bibitem{rockenschaub}
+P.~Rockenschaub, A.~Hilbert, T.~Kossen, P.~Elbers, F.~von Dincklage, V.~I.
+  Madai, et~al., {The Impact of Multi-Institution Datasets on the
+  Generalizability of Machine Learning Prediction Models in the ICU}, Crit.
+  Care Med. 52~(11) (2024) 1710--1721.
+\newblock \href {https://doi.org/10.1097/CCM.0000000000006359}
+  {\path{doi:10.1097/CCM.0000000000006359}}.
+
+\bibitem{do}
+D.-K. Do, P.~Rockenschaub, S.~D. Boie, O.~Kumpf, H.-D. Volk, F.~Balzer, et~al.,
+  {The Impact of Evaluation Strategy on Sepsis Prediction Model Performance
+  Metrics in Intensive Care Data: Retrospective Cohort Study}, J. Med. Internet
+  Res. 28 (2026) e72083.
+\newblock \href {https://doi.org/10.2196/72083} {\path{doi:10.2196/72083}}.
+
+\bibitem{yaib}
+R.~van~de Water, H.~Schmidt, P.~Elbers, P.~Thoral, B.~Arnrich, P.~Rockenschaub,
+  \href{https://openreview.net/forum?id=ox2ATRM90I}{{Yet Another ICU Benchmark:
+  A Flexible Multi-Center Framework for Clinical ML}}, in: The Twelfth
+  International Conference on Learning Representations, 2024, also available as
+  arXiv:2306.05109v4.
+\newline\urlprefix\url{https://openreview.net/forum?id=ox2ATRM90I}
+
+\bibitem{angelopoulos}
+A.~N. Angelopoulos, S.~Bates, {Conformal Prediction: A Gentle Introduction},
+  Found. Trends Mach. Learn. 16~(4) (2023) 494--591.
+\newblock \href {https://doi.org/10.1561/2200000101}
+  {\path{doi:10.1561/2200000101}}.
+
+\bibitem{vancalster}
+B.~Van~Calster, D.~J. McLernon, M.~van Smeden, L.~Wynants, E.~W. Steyerberg,
+  {Calibration: the Achilles heel of predictive analytics}, BMC Med. 17~(1)
+  (2019) 230.
+\newblock \href {https://doi.org/10.1186/s12916-019-1466-7}
+  {\path{doi:10.1186/s12916-019-1466-7}}.
+
+\bibitem{clopper}
+C.~J. Clopper, E.~S. Pearson, {The use of confidence or fiducial limits
+  illustrated in the case of the binomial}, Biometrika 26~(4) (1934) 404--413.
+\newblock \href {https://doi.org/10.1093/biomet/26.4.404}
+  {\path{doi:10.1093/biomet/26.4.404}}.
+
+\bibitem{efron}
+B.~Efron, {Bootstrap Methods: Another Look at the Jackknife}, Ann. Stat. 7~(1)
+  (1979) 1--26.
+\newblock \href {https://doi.org/10.1214/aos/1176344552}
+  {\path{doi:10.1214/aos/1176344552}}.
+
+\bibitem{saito}
+T.~Saito, M.~Rehmsmeier, {The Precision-Recall Plot Is More Informative than
+  the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets}, PLOS
+  ONE 10~(3) (2015) e0118432.
+\newblock \href {https://doi.org/10.1371/journal.pone.0118432}
+  {\path{doi:10.1371/journal.pone.0118432}}.
+
+\bibitem{eicudemo}
+A.~Johnson, T.~Pollard, O.~Badawi, J.~Raffa, {eICU Collaborative Research
+  Database Demo}, PhysioNet, dataset, version 2.0.1 (2021).
+\newblock \href {https://doi.org/10.13026/4mxk-na84}
+  {\path{doi:10.13026/4mxk-na84}}.
+
+\bibitem{eicu}
+T.~J. Pollard, A.~E.~W. Johnson, J.~D. Raffa, L.~A. Celi, R.~G. Mark,
+  O.~Badawi, {The eICU Collaborative Research Database, a freely available
+  multi-center database for critical care research}, Sci. Data 5~(1) (2018)
+  180178.
+\newblock \href {https://doi.org/10.1038/sdata.2018.178}
+  {\path{doi:10.1038/sdata.2018.178}}.
+
+\bibitem{singer}
+M.~Singer, C.~S. Deutschman, C.~W. Seymour, M.~Shankar-Hari, D.~Annane,
+  M.~Bauer, et~al., {The Third International Consensus Definitions for Sepsis
+  and Septic Shock (Sepsis-3)}, JAMA 315~(8) (2016) 801--810.
+\newblock \href {https://doi.org/10.1001/jama.2016.0287}
+  {\path{doi:10.1001/jama.2016.0287}}.
+
+\end{thebibliography}

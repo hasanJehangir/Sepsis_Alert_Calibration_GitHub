@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "checked_on": "2026-10-06",
+  "scientific_artifact_byte_identity_checks": 287,
+  "scientific_artifact_mismatches": [],
+  "archived_supplement_paths_restored": 297,
+  "original_files_changed_for_author_details_and_package_metadata": [
+    "AUTHOR_METADATA.json",
+    "ETHICS_AND_AUTHOR_STATEMENTS.md",
+    "README.md",
+    "REPOSITORY_MANIFEST.json",
+    "publication/README.md",
+    "publication/Sepsis_Alert_Transport_Manuscript.log",
+    "publication/Sepsis_Alert_Transport_Manuscript.pdf",
+    "publication/Sepsis_Alert_Transport_Manuscript.tex"
+  ],
+  "manuscript_numerical_audit": "PASS",
+  "manuscript_numerical_audit_checks": 58,
+  "model_training_repeated": false,
+  "raw_clinical_input_tables_included": false,
+  "ethics_approval_or_exemption_asserted": false,
+  "competing_interests_declaration_confirmed": false,
+  "scope": "Recovered-output byte identity, contact-metadata update and packaging; not new clinical or human validation."
+}
