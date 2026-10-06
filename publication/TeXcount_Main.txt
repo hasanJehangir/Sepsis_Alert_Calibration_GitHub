@@ -1,0 +1,91 @@
+File: Sepsis_Alert_Transport_Manuscript.tex
+Encoding: ascii
+Words in text: 3457
+Words in headers: 88
+Words outside text (captions, etc.): 97
+Number of headers: 22
+Number of floats/tables/figures: 3
+Number of math inlines: 36
+Number of math displayed: 1
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  285+15+0 (2/0/2/0) _top_
+  299+1+0 (1/0/0/0) Section: Introduction
+  276+5+0 (1/0/0/0) Subsection: Related work and study position
+  0+1+0 (1/0/0/0) Section: Methods
+  218+4+0 (1/0/0/0) Subsection: Design, cohorts and chronology
+  135+5+0 (1/0/1/0) Subsection: Causal features and fixed models
+  217+5+0 (1/0/8/1) Subsection: Admission thresholds and emission rules
+  127+4+0 (1/0/1/0) Subsection: Endpoints and statistical analysis
+  170+3+0 (1/0/1/0) Subsection: External public-demo evaluation
+  0+1+0 (1/0/0/0) Section: Results
+  126+6+28 (1/1/4/0) Subsection: Calibration unit and asymmetric threshold transport
+  174+5+0 (1/0/12/0) Subsection: Warning timing and operating-point variability
+  140+3+32 (1/1/6/0) Subsection: Exploratory emission-rule trade-offs
+  132+5+37 (1/1/1/0) Subsection: Limited external detection and amendment
+  0+1+0 (1/0/0/0) Section: Discussion
+  317+6+0 (1/0/0/0) Subsection: Interpretation and relation to previous evidence
+  422+4+0 (1/0/0/0) Subsection: Clinical implications and limitations
+  240+1+0 (1/0/0/0) Section: Conclusion
+  43+1+0 (1/0/0/0) Section: Acknowledgements
+  95+1+0 (1/0/0/0) Section: Declarations
+  41+11+0 (1/0/0/0) Section: Declaration of generative AI and AI-assisted technologies in the writing process
+
+Included file: ./tables/cohort.tex
+Encoding: ascii
+Words in text: 0
+Words in headers: 0
+Words outside text (captions, etc.): 3
+Number of headers: 0
+Number of floats/tables/figures: 1
+Number of math inlines: 0
+Number of math displayed: 0
+
+Included file: ./tables/transport.tex
+Encoding: ascii
+Words in text: 0
+Words in headers: 0
+Words outside text (captions, etc.): 5
+Number of headers: 0
+Number of floats/tables/figures: 1
+Number of math inlines: 0
+Number of math displayed: 0
+
+Included file: ./tables/policies.tex
+Encoding: ascii
+Words in text: 0
+Words in headers: 0
+Words outside text (captions, etc.): 9
+Number of headers: 0
+Number of floats/tables/figures: 1
+Number of math inlines: 0
+Number of math displayed: 0
+
+Included file: ./tables/external.tex
+Encoding: ascii
+Words in text: 0
+Words in headers: 0
+Words outside text (captions, etc.): 9
+Number of headers: 0
+Number of floats/tables/figures: 1
+Number of math inlines: 0
+Number of math displayed: 0
+
+Sum of files: Sepsis_Alert_Transport_Manuscript.tex
+File(s) total: Sepsis_Alert_Transport_Manuscript.tex
+Words in text: 3457
+Words in headers: 88
+Words outside text (captions, etc.): 123
+Number of headers: 22
+Number of floats/tables/figures: 7
+Number of math inlines: 36
+Number of math displayed: 1
+Files: 5
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  3457+88+97 (22/3/36/1) File: Sepsis_Alert_Transport_Manuscript.tex
+  0+0+3 (0/1/0/0) Included file: ./tables/cohort.tex
+  0+0+5 (0/1/0/0) Included file: ./tables/transport.tex
+  0+0+9 (0/1/0/0) Included file: ./tables/policies.tex
+  0+0+9 (0/1/0/0) Included file: ./tables/external.tex
+

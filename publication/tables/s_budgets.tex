@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\caption{Conditional local-calibration variability: full-feature boosting.}\label{tab:sbud}
+\begin{tabular}{lrrrr}
+\toprule
+Transfer & Budget & False alerts (\%) & Any6 (\%) & First6 (\%) \\
+\midrule
+A$\to$B & 100 & 8.4 [6.7--17.0] & 42.9 [42.2--51.9] & 5.5 [3.9--9.8] \\
+A$\to$B & 250 & 10.4 [7.6--12.3] & 44.8 [42.9--48.2] & 5.2 [3.9--7.9] \\
+A$\to$B & 500 & 10.4 [8.8--11.6] & 44.8 [43.5--46.8] & 5.2 [4.5--6.5] \\
+B$\to$A & 100 & 9.7 [6.5--14.3] & 33.7 [26.8--39.8] & 7.7 [7.3--8.5] \\
+B$\to$A & 250 & 10.2 [8.2--12.9] & 34.2 [31.0--38.6] & 7.7 [7.3--8.1] \\
+B$\to$A & 500 & 10.9 [9.5--13.0] & 35.4 [33.4--38.9] & 7.7 [7.3--8.1] \\
+\bottomrule
+\end{tabular}
+\par\vspace{3pt}\begin{minipage}{\linewidth}\footnotesize Values are medians [5th--95th percentiles] over 20 fixed nested calibration samples. Budgets count all sampled admissions, with only nonseptic admissions used for thresholds. Percentiles are not confidence intervals for a deployment population.\end{minipage}
+\end{table}

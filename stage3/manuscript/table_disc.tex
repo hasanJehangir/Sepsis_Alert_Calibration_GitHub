@@ -1,0 +1,13 @@
+\begin{table}[htbp]\centering\small
+\caption{Hourly discrimination and Brier score in the transferred test cohorts.}\label{tab:disc}
+\begin{tabular}{llrrrr}\toprule
+Transfer & Model & AUROC & AP & Brier & Positive hours (\%) \\\midrule
+A$\to$B & Logistic & 0.731 & 0.031 & 0.0075 & 0.8 \\
+A$\to$B & Boosting & 0.751 & 0.037 & 0.0084 & 0.8 \\
+A$\to$B & Reduced boosting & 0.713 & 0.021 & 0.0076 & 0.8 \\
+B$\to$A & Logistic & 0.697 & 0.043 & 0.0122 & 1.2 \\
+B$\to$A & Boosting & 0.777 & 0.058 & 0.0123 & 1.2 \\
+B$\to$A & Reduced boosting & 0.701 & 0.027 & 0.0126 & 1.2 \\
+\bottomrule\end{tabular}
+\par\vspace{3pt}\begin{minipage}{.98\linewidth}\footnotesize AP denotes average precision. Hours are clustered within admissions. These descriptive hourly metrics do not establish admission-level error control or probability calibration.\end{minipage}
+\end{table}

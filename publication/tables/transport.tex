@@ -1,0 +1,20 @@
+\begin{table}[tbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\caption{Primary natural-duration transport: full-feature boosting.}\label{tab:transport}
+\begin{tabular}{llrrr}
+\toprule
+Transfer & Calibration & \makecell{False alerts (\%)\\{}[95\% CI]} & \makecell{Any6\\{}$n/N$ (\%)} & \makecell{First6\\{}$n/N$ (\%)} \\
+\midrule
+A$\to$B & Source hourly & 22.9 [21.5--24.3] & 86/154 (55.8) & 15/154 (9.7) \\
+A$\to$B & Source admission & 7.5 [6.7--8.4] & 66/154 (42.9) & 8/154 (5.2) \\
+A$\to$B & Local admission & 10.4 [9.4--11.5] & 69/154 (44.8) & 8/154 (5.2) \\
+B$\to$A & Source hourly & 60.3 [58.7--62.0] & 216/260 (83.1) & 27/260 (10.4) \\
+B$\to$A & Source admission & 31.2 [29.6--32.7] & 153/260 (58.8) & 19/260 (7.3) \\
+B$\to$A & Local admission & 11.1 [10.1--12.2] & 94/260 (36.2) & 20/260 (7.7) \\
+\bottomrule
+\end{tabular}
+\par\vspace{3pt}\begin{minipage}{\linewidth}\footnotesize Nonseptic denominators are 3,473 for A$\to$B and 3,422 for B$\to$A. Any6 and First6 use all eligible cases. All thresholds target 10\% on their stated calibration unit.\end{minipage}
+\end{table}

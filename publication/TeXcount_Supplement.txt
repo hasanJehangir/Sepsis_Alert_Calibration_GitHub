@@ -1,0 +1,113 @@
+File: Supplementary_Material.tex
+Encoding: ascii
+Words in text: 1468
+Words in headers: 50
+Words outside text (captions, etc.): 26
+Number of headers: 10
+Number of floats/tables/figures: 1
+Number of math inlines: 13
+Number of math displayed: 0
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  0+12+0 (1/0/0/0) _top_
+  65+5+26 (1/1/0/0) Section: Analysis chronology and evidence scope
+  57+3+0 (1/0/0/0) Section: Focused literature comparison
+  411+5+0 (1/0/5/0) Section: Supplementary model and calibration specification
+  101+3+0 (1/0/0/0) Section: Additional quantitative results
+  0+6+0 (1/0/0/0) Section: External cohort, label and mapping audit
+  210+4+0 (1/0/0/0) Subsection: Resource selection and identities
+  150+3+0 (1/0/2/0) Subsection: Operational label differences
+  262+5+0 (1/0/6/0) Subsection: Causal predictor availability and units
+  212+4+0 (1/0/0/0) Section: Reproducibility and human-review scope
+
+Included file: ./tables/s_literature.tex
+Encoding: ascii
+Words in text: 0
+Words in headers: 0
+Words outside text (captions, etc.): 9
+Number of headers: 0
+Number of floats/tables/figures: 1
+Number of math inlines: 0
+Number of math displayed: 0
+
+Included file: ./tables/s_discrimination.tex
+Encoding: ascii
+Words in text: 0
+Words in headers: 0
+Words outside text (captions, etc.): 8
+Number of headers: 0
+Number of floats/tables/figures: 1
+Number of math inlines: 0
+Number of math displayed: 0
+
+Included file: ./tables/s_budgets.tex
+Encoding: ascii
+Words in text: 0
+Words in headers: 0
+Words outside text (captions, etc.): 5
+Number of headers: 0
+Number of floats/tables/figures: 1
+Number of math inlines: 0
+Number of math displayed: 0
+
+Included file: ./tables/s_paired.tex
+Encoding: ascii
+Words in text: 0
+Words in headers: 0
+Words outside text (captions, etc.): 8
+Number of headers: 0
+Number of floats/tables/figures: 1
+Number of math inlines: 0
+Number of math displayed: 0
+
+Included file: ./tables/s_external_discrimination.tex
+Encoding: ascii
+Words in text: 0
+Words in headers: 0
+Words outside text (captions, etc.): 10
+Number of headers: 0
+Number of floats/tables/figures: 1
+Number of math inlines: 0
+Number of math displayed: 0
+
+Included file: ./tables/s_allmodels.tex
+Encoding: ascii
+Words in text: 0
+Words in headers: 0
+Words outside text (captions, etc.): 6
+Number of headers: 0
+Number of floats/tables/figures: 1
+Number of math inlines: 0
+Number of math displayed: 0
+
+Included file: ./tables/s_mapping.tex
+Encoding: ascii
+Words in text: 251
+Words in headers: 0
+Words outside text (captions, etc.): 14
+Number of headers: 0
+Number of floats/tables/figures: 0
+Number of math inlines: 0
+Number of math displayed: 0
+
+Sum of files: Supplementary_Material.tex
+File(s) total: Supplementary_Material.tex
+Words in text: 1719
+Words in headers: 50
+Words outside text (captions, etc.): 86
+Number of headers: 10
+Number of floats/tables/figures: 7
+Number of math inlines: 13
+Number of math displayed: 0
+Files: 8
+Subcounts:
+  text+headers+captions (#headers/#floats/#inlines/#displayed)
+  1468+50+26 (10/1/13/0) File: Supplementary_Material.tex
+  0+0+9 (0/1/0/0) Included file: ./tables/s_literature.tex
+  0+0+8 (0/1/0/0) Included file: ./tables/s_discrimination.tex
+  0+0+5 (0/1/0/0) Included file: ./tables/s_budgets.tex
+  0+0+8 (0/1/0/0) Included file: ./tables/s_paired.tex
+  0+0+10 (0/1/0/0) Included file: ./tables/s_external_discrimination.tex
+  0+0+6 (0/1/0/0) Included file: ./tables/s_allmodels.tex
+  251+0+14 (0/0/0/0) Included file: ./tables/s_mapping.tex
+

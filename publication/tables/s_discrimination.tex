@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\caption{Natural-duration hourly discrimination for all transferred model fits.}\label{tab:sdisc}
+\begin{tabular}{llrrrr}
+\toprule
+Transfer & Model & AUROC & AP & Brier & Prevalence (\%) \\
+\midrule
+A$\to$B & Logistic regression & 0.731 & 0.0309 & 0.0075 & 0.761 \\
+A$\to$B & Full boosting & 0.751 & 0.0374 & 0.0084 & 0.761 \\
+A$\to$B & Reduced boosting & 0.713 & 0.0214 & 0.0076 & 0.761 \\
+B$\to$A & Logistic regression & 0.697 & 0.0432 & 0.0122 & 1.219 \\
+B$\to$A & Full boosting & 0.777 & 0.0580 & 0.0123 & 1.219 \\
+B$\to$A & Reduced boosting & 0.701 & 0.0272 & 0.0126 & 1.219 \\
+\bottomrule
+\end{tabular}
+\par\vspace{3pt}\begin{minipage}{\linewidth}\footnotesize A$\to$B: 121,377 eligible hours; B$\to$A: 127,929. AP = average precision. These are descriptive operational-label metrics; no independent-hour intervals are attached.\end{minipage}
+\end{table}

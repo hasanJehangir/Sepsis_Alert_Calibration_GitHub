@@ -1,0 +1,9 @@
+{
+  "locked_at_utc": "2026-09-29T17:30:21.503000+00:00",
+  "status": "BEFORE_RESERVED_RECORD_DOWNLOAD_OR_ANALYSIS",
+  "pilot_records_present": 3000,
+  "manifest_sha256": "2c92f9927b927283c69a71854fb02066a784e8067f92436e255996961404631e",
+  "protocol_sha256": "6cd74d1ec0eba51ccf91ec6035fe2145d8d43f80425acaf911b2f17cd51174bc",
+  "config_sha256": "eab4559bf6bf484bca1502fd9b7e527e63e449c7123500bb287b109abeae1611",
+  "pilot_code_sha256": "b8e86ca788b64eb3d8ee90c14f43cff05c6071c9f960da137d0dd6b09c0d1239"
+}

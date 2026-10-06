@@ -1,0 +1,15 @@
+\begin{table}[htbp]\centering\small
+\caption{Exploratory paired differences: three-of-five minus hourly, at the local 10\% target.}\label{tab:paired}
+\begin{tabular}{llrr}\toprule
+Transfer & Endpoint & Difference & 95\% interval \\\midrule
+A$\to$B & Admission FA (pp) & +0.32 & -0.29 to +0.89 \\
+A$\to$B & Any-6 (pp) & +0.65 & -3.25 to +4.55 \\
+A$\to$B & First-6 (pp) & +2.60 & -0.65 to +6.49 \\
+A$\to$B & Emissions/admission & +0.30 & +0.25 to +0.35 \\
+B$\to$A & Admission FA (pp) & +0.58 & -0.12 to +1.26 \\
+B$\to$A & Any-6 (pp) & +1.54 & -1.92 to +5.00 \\
+B$\to$A & First-6 (pp) & -2.31 & -5.00 to +0.38 \\
+B$\to$A & Emissions/admission & +0.34 & +0.29 to +0.40 \\
+\bottomrule\end{tabular}
+\par\vspace{3pt}\begin{minipage}{.98\linewidth}\footnotesize pp denotes percentage points. Intervals use 2,000 paired admission-bootstrap draws, stratified by outcome and conditional on fitted models and thresholds. They omit calibration uncertainty and multiplicity adjustment. Emissions/admission is a mean difference for nonseptic admissions.\end{minipage}
+\end{table}

@@ -1,0 +1,191 @@
+% Compile with pdfLaTeX, BibTeX, pdfLaTeX, pdfLaTeX.
+% Funding and educational background confirmed by the author on 6 October 2026.
+% Correspondence, ethics status, interests and contributions still require completion.
+\documentclass[preprint,12pt]{elsarticle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,array,graphicx,makecell}
+\usepackage{setspace,placeins}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage[a4paper,margin=25mm]{geometry}
+\doublespacing
+\setlength{\emergencystretch}{2em}
+\journal{Computer Methods and Programs in Biomedicine}
+\newcommand{\anysix}{Any6}
+\newcommand{\firstsix}{First6}
+\begin{document}
+\begin{frontmatter}
+\title{Admission-level false-alert calibration and warning timing in cross-hospital sepsis prediction: a reproducible retrospective evaluation}
+\author{Hasan Jehangir\fnref{education}}
+\address{Independent researcher, Pakistan}
+\fntext[education]{Educational background: BS in Data Science, University of Engineering and Technology, Peshawar, Pakistan.}
+% Add the verified corresponding-author email and any eligible coauthors here.
+% A completed degree is not asserted as a current institutional research appointment.
+\begin{abstract}
+\begin{singlespace}
+\textbf{Background and Objectives:} Hourly sepsis scores, patients receiving a warning and repeated warning emissions have different error denominators. We evaluated how calibration unit, hospital transfer and temporal emission rules affect admission-level false alerts and pre-onset warning timing.
+
+\textbf{Methods:} After excluding a development pilot, 36,658 eligible admissions from the PhysioNet Challenge 2019 were partitioned into training, calibration and test sets within two hospitals. Logistic regression and two gradient-boosting representations were fitted separately per hospital. A locally locked analysis compared hourly and admission-maximum thresholds, source-to-target transport and local calibration. An exploratory follow-up compared five emission rules. Six frozen models were subsequently evaluated on a selected eICU public-demo cohort with modified benchmark sepsis labels; a post-test measurement amendment was reported separately.
+
+\textbf{Results:} For full-feature boosting, source admission calibration produced false-alert rates of 7.5\% for A$\to$B and 31.2\% for B$\to$A. Local calibration produced 10.4\% and 11.1\%, with any-warning sensitivity in the six-hour pre-onset window of 44.8\% and 36.2\%; first-warning sensitivity was 5.2\% and 7.7\%. Four-hour silencing reduced nonseptic emissions by 68.3\% and 57.5\% while preserving admissions alerted and first-warning timing. Recalibrated recurrent three-of-five eligibility increased emissions without a consistent first-window benefit. The external test cohort contained 444 nonseptic admissions and 17 cases. Local boosting thresholds alerted 8.3--10.6\% of nonseptic admissions across original and amended inputs, but detected only 0--1 cases in the six-hour window.
+
+\textbf{Conclusions:} Local admission calibration can align false-alert exposure with a nominal operating target, but neither reliable threshold transport nor adequate external case detection was established. Admission exposure, repeated emissions and first-warning timing should be reported together. These results support an evaluation framework, not a clinically validated sepsis intervention.
+\end{singlespace}
+\end{abstract}
+\begin{keyword}
+sepsis \sep clinical artificial intelligence \sep threshold calibration \sep hospital transfer \sep alarm burden \sep external evaluation
+\end{keyword}
+\end{frontmatter}
+\newpage
+
+\section{Introduction}
+Sepsis is defined by life-threatening organ dysfunction associated with a dysregulated response to infection \cite{singer}. Machine-learning systems seek to recognize deterioration before recorded onset, but their value depends on how predictions reach clinicians. A model can generate acceptable discrimination while repeatedly alerting the same patients or warning at times poorly aligned with an intended intervention window. Published reviews identify substantial heterogeneity in sepsis definitions, prediction horizons and evaluation designs \cite{fleuren}. Transparent assessment of the operational warning process is therefore necessary alongside model-level accuracy.
+
+An hourly false-positive fraction does not directly describe the probability that a nonseptic admission receives at least one alert. Longer records create more opportunities to cross a threshold, and dependent scores complicate extrapolation from individual hours. Likewise, suppressing repeat warnings reduces emissions without necessarily reducing the number of admissions exposed to a warning. Finally, an alert inside a six-hour pre-onset window may be a repetition of a much earlier warning. These quantities have distinct denominators and interpretations.
+
+The PhysioNet/Computing in Cardiology Challenge 2019 provides a reproducible test setting with two released hospital datasets and a third unreleased evaluation dataset \cite{reyna,reynadata}. We used only the two released datasets. Their labels already begin six hours before clinical onset; scoring post-onset or shifting the target again changes the task. Public records also contain unequal follow-up and heterogeneous measurement availability, making the calibration unit consequential.
+
+We examine three linked questions: whether source admission thresholds retain their nominal false-alert operating point after hospital transfer; whether local completed-admission calibration alters detection and timing; and whether temporal emission rules change patient exposure or only repetition. A subsequent external dataset evaluation tests the same frozen models under a different data and label pipeline. The contribution is an auditable empirical comparison of these questions, with unfavorable findings retained, rather than a new prediction architecture or calibration algorithm.
+
+\subsection{Related work and study position}
+External validation has demonstrated that a widely implemented proprietary sepsis model can perform differently from its reported development results \cite{wong}. International deep-learning validation \cite{moor} and multi-institution training studies \cite{rockenschaub} examine broader generalization. These studies motivate evaluating transport explicitly; their published performance cannot be compared directly with ours because cohorts, labels, models and alert definitions differ.
+
+Operational evaluation is already an established research topic. Do et al. compared sepsis evaluation strategies and showed that the evaluation setup changes reported performance \cite{do}. COMPOSER incorporates uncertainty-based abstention \cite{composer}, while SepsisAI emphasizes reduction of false alarms through a clinical decision-support design \cite{gupta}. We study selected temporal-rule structures on fixed predictions. In particular, our recurrent three-of-five rule is an explicit adaptation, not a reproduction of the complete SepsisAI system. Supplementary Table~S1 maps the relevant literature to the present questions.
+
+Calibration of predicted probabilities and calibration of an alert threshold also address different targets. Probability calibration concerns agreement between risk estimates and observed outcomes \cite{vancalster}; our primary procedure selects a threshold for the event ``at least one warning in a nonseptic admission.'' Its finite-rank rule follows standard conformal methodology, whose marginal guarantee requires exchangeability \cite{angelopoulos}. It is not a novel conformal algorithm, and it does not establish risk calibration or error control under hospital shift.
+
+YAIB provides standardized clinical machine-learning tasks and illustrates the impact of cohort construction and preprocessing \cite{yaib}. We use its published eICU demo labels while rebuilding causal predictors from raw demo tables. The distinctive empirical focus here is the joint assessment of calibration unit, transport direction, repeated emissions and first-warning timing, followed by a transparently limited external dataset check. The study is positioned as reproducible evaluation research; it does not claim superiority over published clinical systems.
+
+\section{Methods}
+\subsection{Design, cohorts and chronology}
+A 3,000-record development pilot was excluded from subsequent fitting and testing. An analysis specification was locally timestamped and hashed on 29 September 2026 before the remaining records were examined; it was not publicly preregistered. The locked analysis was followed by exploratory emission-rule comparisons on the already examined test sets. A separate external protocol was locked before external performance was computed. Its later measurement amendment remains explicitly exploratory.
+
+Challenge version 1.0.0 contains 40,336 files \cite{reynadata,physionet}. Of 37,336 reserved records, 678 were excluded: 644 early or left-censored cases, 19 nonadult records and 15 with reconstructed onset beyond observation. The 36,658 eligible admissions contributed 1,254,335 scoring hours. Deterministic per-hospital assignments retained approximately 60\% training, 20\% calibration and 20\% test partitions (Table~\ref{tab:cohort}). Exact file-hash screening found no duplicate eligible files or pilot matches; distinct admissions from the same person cannot be excluded.
+
+For positive records, onset was reconstructed as the first positive released-label ICU hour plus six. First-positive hours at or before six were excluded. Scores were evaluated from ICU hour six strictly before onset for cases, and through recorded discharge for nonseptic admissions. ``Nonseptic'' therefore describes the released observation segment. Natural duration was primary. Secondary 24-, 48- and 72-hour caps excluded cases whose onset exceeded the cap; they define retrospective conditional cohorts, not complete prospective follow-up.
+
+\input{tables/cohort.tex}
+
+\subsection{Causal features and fixed models}
+The full representation comprised 120 features: 34 last-observed physiological variables, four static/time variables, 34 current-measurement indicators, 34 elapsed-measurement times capped at 168 hours, and seven six-hour means plus seven changes. Forward filling and summaries used only current or preceding measurements. Unit identifiers and outcomes were excluded.
+
+Three models were fitted per hospital. Logistic regression used training-only median imputation, scaling, an L2 penalty with $C=1$, LBFGS and at most 1,000 iterations. Histogram gradient boosting used 200 iterations, learning rate 0.07, 15 maximum leaves, minimum leaf size 40, L2 regularization 1 and no early stopping. Reduced boosting removed measurement indicators, elapsed-measurement times and ICU hour, retaining 51 features. This ablation retains implicit measurement-process information. No class weighting, resampling or hyperparameter search was performed. Longer admissions contributed more training rows. Supplementary methods specify seeds and preprocessing details.
+
+\subsection{Admission thresholds and emission rules}
+For frozen scores $p_{it}$, the nonseptic admission score is $M_i=\max_t p_{it}$ over eligible hours. With $n$ calibration admissions and target $\alpha$, we used
+\begin{equation}
+ k=\lceil(n+1)(1-\alpha)\rceil,\qquad
+ \theta=M_{(k)},\qquad \mathrm{warning}_{it}=\mathbf{1}\{p_{it}>\theta\}.
+\end{equation}
+If $k>n$, $\theta=+\infty$. Strict exceedance handles ties conservatively. For a separately fitted model and exchangeable nonseptic calibration and future admissions, this standard order statistic controls the marginal probability of any warning \cite{angelopoulos}. It provides no distribution-shift guarantee or conditional guarantee for every realized calibration sample.
+
+The primary target was $\alpha=0.10$. Source-hourly calibration applied the same rank formula to pooled nonseptic hours; source-admission calibration used source maxima; local-admission calibration used disjoint labeled target admissions without refitting models. The hourly procedure is a descriptive comparator, not independent-hour conformal inference. Empirical admission quantiles isolated the finite-rank correction. Local budgets of 100, 250 and 500 total admissions used 20 fixed nested permutations; only sampled nonseptic admissions determined thresholds.
+
+Five exploratory rules emitted every crossing, the first crossing only, crossings separated by at least four or six hours, or every hour with at least three exceedances among the current and four preceding scores. The recurrent three-of-five transformation uses the third-largest score, with unavailable startup positions set to $-\infty$. It has no reset or clinician-acknowledgement mechanism. Rules were compared at common thresholds and separately calibrated nominal admission targets of 5\%, 10\% and 20\%. Suppression preserves the first crossing and thus shares the hourly admission threshold. All 660 comparisons were retained.
+
+\subsection{Endpoints and statistical analysis}
+Admission false-alert rate is nonseptic admissions with any emitted warning divided by all nonseptic admissions. Burden is nonseptic emissions per admission or per 100 eligible hours. \anysix{} is the fraction of cases with any emission in $[\mathrm{onset}-6,\mathrm{onset})$; \firstsix{} requires the admission's first emission in that window. Earlier first warnings and twelve-hour endpoints were also recorded. Earlier warnings are not automatically clinically unhelpful.
+
+Proportions have two-sided 95\% Clopper--Pearson intervals \cite{clopper}. Paired differences used 2,000 outcome-stratified admission bootstrap draws \cite{efron}. Intervals condition on fitted models and thresholds, exclude calibration uncertainty and were not multiplicity-adjusted. Budget percentiles describe repeated sampling of the retained calibration pool, not population confidence intervals. Hourly AUROC, average precision and Brier score were descriptive; average precision was interpreted with prevalence \cite{saito}. No independent-hour uncertainty or patient treatment effect was estimated.
+
+\subsection{External public-demo evaluation}
+The public eICU-CRD demo v2.0.1 \cite{eicudemo,eicu} and pinned YAIB labels \cite{yaib} supplied 896 selected stays. Outcome-blind hash selection retained one stay per person, yielding 677 people; 21 early/left-censored cases were excluded. Eligible people were assigned by hash to calibration (195) or test (461). No model was retrained. Cross-resource hospital/person nonoverlap cannot be established, and calibration/test hospitals were not held out.
+
+YAIB's modified sepsis labels use an antibiotic-based infection proxy and different SOFA windows from the Challenge. They were not independently reconstructed or clinically adjudicated. Raw predictors used completed hourly bins and conservative availability offsets for corrected laboratory and charted measurements. Prespecified variants retained native numeric scales or masked lactate/magnesium because source-unit provenance was ambiguous.
+
+The initial adapter omitted nursing temperature and respiratory-chart FiO$_2$. A post-test amendment added them; both 180-row runs were preserved. Supplementary methods document the mapping, selection, label differences and unresolved discrepancy between the demo's stated hospital count and surrogate identifiers. This is external dataset evaluation on a selected public demo, not verified hospital-independent clinical validation.
+
+\section{Results}
+\subsection{Calibration unit and asymmetric threshold transport}
+The Challenge test sets contained 7,309 admissions, including 414 cases. Full-feature boosting illustrates the primary comparison (Table~\ref{tab:transport}; Figure~\ref{fig:transport}). Source-hourly calibration produced admission false-alert rates of 22.9\% for A$\to$B and 60.3\% for B$\to$A. Source admission maxima reduced these to 7.5\% and 31.2\%, with \anysix{} falling from 55.8\% to 42.9\% and from 83.1\% to 58.8\%, respectively. Changing calibration unit changes the targeted error event, not prediction discrimination.
+
+All three models showed source-admission rates below 10\% for A$\to$B and above 10\% for B$\to$A; the latter ranged from 31.2\% to 48.9\%. Local calibration yielded 10.2--11.1\% across the six transferred fits. The finite-rank versus empirical-quantile correction changed natural-duration full-calibration rates by at most 0.06 percentage points. Calibration unit and site accounted for the larger observed differences.
+
+\input{tables/transport.tex}
+\begin{figure}[tbp]\centering
+\includegraphics[width=\linewidth]{figures/transport.pdf}
+\caption{Full-feature boosting across hospitals. Points show admission proportions with exact 95\% binomial intervals. The three endpoints have different denominators; the dashed 10\% line applies only to false-alert exposure.}
+\label{fig:transport}
+\end{figure}
+
+\subsection{Warning timing and operating-point variability}
+At local thresholds, \anysix{} was 69/154 (44.8\%) for A$\to$B and 94/260 (36.2\%) for B$\to$A. \firstsix{} was only 8/154 (5.2\%) and 20/260 (7.7\%); earlier first warnings occurred in 44.8\% and 40.4\% of cases. Twelve-hour first-warning sensitivity was 11.7\% and 11.2\%. Repeated warnings therefore contributed substantially to window detection.
+
+For B$\to$A, local minus source admission calibration changed false-alert rate by $-20.0$ percentage points (paired 95\% interval $-21.4$ to $-18.6$) and \anysix{} by $-22.7$ points ($-28.1$ to $-17.7$). The \firstsix{} difference was $+0.4$ points with an interval spanning zero. Transferred hourly AUROC ranged from 0.697 to 0.777 across model families. Smaller local calibration pools produced wider conditional operating-point variation (Supplementary Tables~S2--S4). Threshold recalibration did not change score rankings.
+
+With 100 sampled local admissions, boosting false-alert rates had 5th--95th percentile ranges of 6.7--17.0\% for A$\to$B and 6.5--14.3\% for B$\to$A. At a budget of 500, the ranges narrowed to 8.8--11.6\% and 9.5--13.0\%. These are conditional summaries of 20 samples from existing calibration pools, not independent external validations or guarantees for a particular deployment sample.
+
+\subsection{Exploratory emission-rule trade-offs}
+At local nominal 10\% calibration, hourly boosting emitted 4,093 nonseptic warnings for A$\to$B and 1,736 for B$\to$A. Four-hour silencing reduced these to 1,298 and 737, or 68.3\% and 57.5\% reductions (Table~\ref{tab:policies}; Figure~\ref{fig:policies}). Admission exposure and first-warning timing were unchanged. \anysix{} decreased to 43.5\% and 34.6\%. Single-warning emission reduced counts to 362 and 380, and its \anysix{} necessarily equaled \firstsix{}.
+
+Separately recalibrated three-of-five eligibility produced 5,145 and 2,915 nonseptic emissions. Its admission false-alert rates were 10.7\% and 11.7\%, with \anysix{} of 45.5\% and 37.7\%. \firstsix{} changed by $+2.6$ points for A$\to$B and $-2.3$ for B$\to$A; both paired intervals included zero. At unchanged source-admission thresholds, the same rule reduced admission false alerts to 4.2\% and 20.6\%, but these were unmatched operating points. All model families produced greater nonseptic emissions per 100 hours after matched local recalibration of this recurrent rule.
+
+\input{tables/policies.tex}
+\begin{figure}[tbp]\centering
+\includegraphics[width=\linewidth]{figures/policies.pdf}
+\caption{Exploratory local-10\% rules for full-feature boosting. Upper panels show nonseptic emission counts. Lower panels distinguish any versus first six-hour warning. Three-of-five eligibility is recalibrated and recurrent; these are not comparative clinical-system results.}
+\label{fig:policies}
+\end{figure}
+
+\subsection{Limited external detection and amendment}
+The external test contained 444 nonseptic admissions and 17 cases across 19,645 scoring hours. Initial source-admission boosting thresholds alerted 122/444 (27.5\%) in both source directions; local thresholds alerted 42/444 (9.5\%) and 37/444 (8.3\%). Local \anysix{} detected 1/17 and 0/17 cases (Table~\ref{tab:external}).
+
+The measurement amendment increased direct temperature availability from 2.1\% to 25.0\% and FiO$_2$ from 1.2\% to 13.9\% of scoring hours. Amended source-admission false-alert rates were 28.8\% and 29.5\%; local rates were 10.6\% and 8.6\%, with 0/17 and 1/17 cases detected. The exact upper 95\% limit for 0/17 sensitivity was 19.5\%; 1/17 had an interval of 0.15--28.7\% (Figure~\ref{fig:external}). Native-input hourly AUROC across models was 0.456--0.627 initially and 0.476--0.644 after amendment. All 360 rule comparisons and both input variants remain available.
+
+\input{tables/external.tex}
+\begin{figure}[tbp]\centering
+\includegraphics[width=\linewidth]{figures/external.pdf}
+\caption{External public-demo results for hourly full-feature boosting. Exact 95\% intervals emphasize the 17-case denominator. Local threshold adaptation approached the admission false-alert target but did not establish useful case detection. The amended run reused the examined test set.}
+\label{fig:external}
+\end{figure}
+
+\section{Discussion}
+\subsection{Interpretation and relation to previous evidence}
+The primary result is an asymmetric failure of source admission-threshold transport, alongside a clear distinction between alert exposure, repetition and timing. Source admission calibration substantially reduced exposure relative to source hourly calibration, yet its nominal 10\% target did not transfer reliably. Local labeled calibration moved operating points near that target while sometimes losing substantial case-window detection. This empirical result is consistent with the need for external evaluation emphasized by earlier sepsis studies \cite{wong,moor,rockenschaub}, but does not identify a universal transport direction or establish a preferred model.
+
+The external demo strengthens the caution rather than the efficacy claim. Its local false-alert operating points were reasonably close to the target while six-hour case detection remained weak. A procedure can calibrate an error event even when its scores discriminate poorly. Threshold alignment should therefore not be interpreted as clinical validity. Differences in operational labels, selection and measurement availability provide plausible explanations for poor transport, but the present study cannot disentangle their causal contributions.
+
+Reporting \anysix{} alone can obscure the warning process: a case may cross repeatedly inside the chosen window after its first warning occurred much earlier. Conversely, single-warning emission can sharply lower window sensitivity despite retaining exactly the same first warning. Four-hour silencing reduced repeated emissions without changing admission exposure. These are properties of the specified rules, not discoveries of a new mathematical principle. The useful empirical contribution is their measured magnitude and interaction with calibration in these cohorts.
+
+The recurrent aggregation experiment also demonstrates why the comparator threshold matters. At a fixed threshold, three-of-five eligibility is more restrictive than one crossing. At a separately recalibrated admission target, its lower threshold permits repeated qualifying windows and increased emissions. A rule with acknowledgement, resetting or episode-level logic could behave differently. Our results apply only to the documented adaptation and cannot overturn claims made for the complete SepsisAI implementation \cite{gupta}. Comparing named published systems would require their actual code, task alignment and independent validation.
+
+\subsection{Clinical implications and limitations}
+The analysis supports specifying a tolerable admission exposure together with a repeat-warning policy and intended warning horizon. None of these quantities alone measures clinical usefulness. An earlier warning could help timely assessment or create unnecessary work; a six-hour timing diagnostic cannot decide that question. No treatment recommendations, outcome improvements or deployment-ready operating point follow from these data. Early clinical studies should assess clinician response, workflow effects and potential harms, following relevant reporting guidance \cite{decideai}.
+
+Several limitations are material. Challenge transfer involves two released historical datasets from one resource. File-level partitioning and duplicate hashes cannot exclude different admissions from one person. The external analysis uses a selected demo rather than the full credentialed eICU database. Its 17 test cases yield wide uncertainty, and verified hospital independence from the Challenge is unavailable. Upstream benchmark selection, one-stay sampling and early-case exclusions affect prevalence and case mix. These restrictions prevent extrapolation to an unselected ICU population.
+
+Labels are retrospective operational definitions rather than independent clinical adjudications. YAIB's infection proxy and SOFA windows differ from the Challenge, so external sensitivities are not measurements of an identical clinical target. Label-derived onset reconstruction, record boundaries and capped observation influence denominators. The measurement amendment was made after outcomes were examined and cannot become fresh confirmatory evidence. Retaining both runs avoids presenting the corrected adapter as an untouched external test.
+
+Source-unit ambiguity persists for lactate and magnesium; masking analyses describe sensitivity to that ambiguity without resolving provenance. Nursing and respiratory measurements were initially omitted, while revised-result availability cannot recover superseded values. The reduced representation retains measurement-process information. No subgroup fairness analysis, temporal validation, model refitting or competing-risk analysis was undertaken. Longer stays receive greater training weight and opportunity to alert, and repeated model/direction comparisons are correlated.
+
+Statistical intervals are descriptive and conditional. They omit model-fitting and threshold-estimation uncertainty and do not fully represent hospital clustering, linked admissions or label error. The policy follow-up reused test sets, and no multiplicity correction was applied. Local calibration also requires outcome-labeled completed admissions, a resource that may be delayed or unavailable at deployment. A nominal target does not imply a guaranteed realized test fraction below 10\%.
+
+The study's strengths are fixed model families, causal score construction, explicit chronology, denominator transparency and preservation of unfavorable external findings. Reporting choices were informed by TRIPOD+AI \cite{tripod}; this does not imply a complete checklist certification. A next evaluation should use a genuinely untouched, sufficiently large cohort, auditable feature and label harmonization, person- and hospital-aware partitions, and prespecified operational endpoints. Prospective workflow assessment is needed before claims about patient benefit.
+
+\section{Conclusion}
+This retrospective study shows that calibrating an admission-level false-alert event and suppressing repeated warnings address different objectives. Across the two released Challenge hospitals, admission maxima reduced nonseptic exposure relative to hourly calibration, but source thresholds transported asymmetrically. Local completed-admission calibration moved false-alert rates toward a nominal target while changing case detection; it did not improve score discrimination or ensure appropriately timed first warnings.
+
+Temporal emission rules further changed how performance appeared. Four-hour silencing substantially reduced nonseptic emissions while preserving admissions alerted and first-warning times. Under the documented recurrent implementation, three-of-five aggregation offered no consistent first-window advantage after recalibration and increased emissions. These findings favor evaluating patient exposure, repeat workload and first-warning timing together, with common-threshold and matched-target comparisons distinguished.
+
+The selected eICU demo evaluation found weak case detection despite near-target local false-alert rates. Its small case count, modified labels, unresolved cross-resource independence and post-test measurement amendment constrain generalization. It supplies evidence of limited transport, not independent clinical efficacy. This negative result is consequential: an acceptable false-alert fraction can coexist with inadequate case sensitivity, so calibration success cannot stand in for validation of the warning system. Future comparisons should retain all prespecified models, display case denominators and uncertainty, and avoid selecting favorable endpoints after observing transport failure. The work's contribution is a reproducible analysis of calibration and warning-policy trade-offs. A larger untouched cohort with verified identity separation and audited harmonization, followed by prospective clinician-in-the-loop assessment, is required before considering clinical use.
+
+\FloatBarrier
+\section*{Acknowledgements}
+We acknowledge the data contributors and developers of PhysioNet and YAIB for making the resources used in this analysis available. Clinical and statistical feedback was reported by the author during manuscript preparation; it was not an experimental clinician-in-the-loop evaluation or independent label adjudication.
+
+\section*{Declarations}
+\textbf{Ethics and consent:} Only public de-identified records were analyzed, without participant contact or intervention. The responsible institution's determination concerning review and consent requirements must be documented before submission; no approval or exemption is asserted here.
+
+\textbf{Data and code availability:} Challenge v1.0.0 and eICU demo v2.0.1 are public \cite{reynadata,eicudemo}. The study's computational archives retain code, models, locked protocols, input hashes and results. The accompanying computational package contains the analysis scripts, frozen models, recorded outputs, protocol locks and figure-generation code. Public raw inputs are obtained from the cited repositories. A permanent public code-repository identifier is pending.
+
+\textbf{Funding:} This research received no external funding.
+
+\textbf{Competing interests and contributions:} These author-specific statements, the final author list and correspondence details require author completion before submission.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the writing process}
+During preparation, the author used OpenAI Codex for code implementation, numerical checking, reference verification and manuscript drafting. This assistance does not constitute authorship or independent peer review. Human author review and responsibility for the submitted text, methods and findings are required.
+
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+\end{document}

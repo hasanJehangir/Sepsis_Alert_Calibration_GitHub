@@ -1,0 +1,22 @@
+\begin{table}[tbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\caption{Eligible study partitions.}\label{tab:cohort}
+\begin{tabular}{llrrr}
+\toprule
+Resource & Role & Admissions & Cases & Nonseptic \\
+\midrule
+Challenge A & Train & 11,113 & 778 & 10,335 \\
+Challenge A & Calibration & 3,693 & 271 & 3,422 \\
+Challenge A & Test & 3,682 & 260 & 3,422 \\
+Challenge B & Train & 10,907 & 457 & 10,450 \\
+Challenge B & Calibration & 3,636 & 141 & 3,495 \\
+Challenge B & Test & 3,627 & 154 & 3,473 \\
+eICU demo & Calibration & 195 & 8 & 187 \\
+eICU demo & Test & 461 & 17 & 444 \\
+\bottomrule
+\end{tabular}
+\par\vspace{3pt}\begin{minipage}{\linewidth}\footnotesize Challenge total: 36,658 admissions; eICU demo: 656 people with one selected stay each. The external resource has no training partition. Challenge record splits cannot exclude linked admissions.\end{minipage}
+\end{table}

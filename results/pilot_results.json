@@ -1,0 +1,173 @@
+{
+  "status": "PILOT_ONLY_NOT_CONFIRMATORY",
+  "seed": 20260929,
+  "nominal_alpha": 0.1,
+  "protocol_sha256": "cb7c3ccdbc5b59f19d533e9250e7b94dedbce10449525b9025837b1992224e74",
+  "code_sha256": "b8e86ca788b64eb3d8ee90c14f43cff05c6071c9f960da137d0dd6b09c0d1239",
+  "manifest_sha256": "2c92f9927b927283c69a71854fb02066a784e8067f92436e255996961404631e",
+  "source_model": "Fixed histogram gradient boosting; hospital A pilot training only",
+  "calibration": {
+    "A": {
+      "hourly": 0.005848799009419692,
+      "patient": 0.024053962749125714,
+      "negative_patients": 281,
+      "negative_hours": 8762
+    },
+    "B": {
+      "hourly": 0.007582930720971178,
+      "patient": 0.024369185399625914,
+      "negative_patients": 284,
+      "negative_hours": 8550
+    }
+  },
+  "excluded_records": 64,
+  "included_records": 2936,
+  "reserved_records_never_loaded": 37336,
+  "results": [
+    {
+      "patients": 288,
+      "nonseptic_patients": 274,
+      "septic_patients": 14,
+      "false_alerted_patients": 119,
+      "patient_false_alert_rate": 0.4343065693430657,
+      "patient_false_alert_rate_ci95": [
+        0.3747855754845044,
+        0.4952640010272286
+      ],
+      "timely_detected_patients": 9,
+      "six_hour_window_sensitivity": 0.6428571428571429,
+      "sensitivity_ci95": [
+        0.3513801106159917,
+        0.8724015701408404
+      ],
+      "timely_first_alert_sensitivity": 0.0,
+      "premature_first_alert_fraction": 0.7857142857142857,
+      "hourly_false_positive_rate": 0.12941828254847645,
+      "hourly_auroc": 0.8150689853406151,
+      "hourly_auprc": 0.052695722572792245,
+      "hourly_brier": 0.009036574112012336,
+      "threshold": 0.005848799009419692,
+      "threshold_infinite": false,
+      "site": "A",
+      "policy": "source_hourly"
+    },
+    {
+      "patients": 288,
+      "nonseptic_patients": 274,
+      "septic_patients": 14,
+      "false_alerted_patients": 35,
+      "patient_false_alert_rate": 0.12773722627737227,
+      "patient_false_alert_rate_ci95": [
+        0.09061089860474643,
+        0.17315135050467934
+      ],
+      "timely_detected_patients": 7,
+      "six_hour_window_sensitivity": 0.5,
+      "sensitivity_ci95": [
+        0.23036054144806234,
+        0.7696394585519376
+      ],
+      "timely_first_alert_sensitivity": 0.0,
+      "premature_first_alert_fraction": 0.5714285714285714,
+      "hourly_false_positive_rate": 0.01706371191135734,
+      "hourly_auroc": 0.8150689853406151,
+      "hourly_auprc": 0.052695722572792245,
+      "hourly_brier": 0.009036574112012336,
+      "threshold": 0.024053962749125714,
+      "threshold_infinite": false,
+      "site": "A",
+      "policy": "source_patient"
+    },
+    {
+      "patients": 1176,
+      "nonseptic_patients": 1136,
+      "septic_patients": 40,
+      "false_alerted_patients": 490,
+      "patient_false_alert_rate": 0.43133802816901406,
+      "patient_false_alert_rate_ci95": [
+        0.40230742513944584,
+        0.4607250884020601
+      ],
+      "timely_detected_patients": 30,
+      "six_hour_window_sensitivity": 0.75,
+      "sensitivity_ci95": [
+        0.5880380198485702,
+        0.873085201067155
+      ],
+      "timely_first_alert_sensitivity": 0.05,
+      "premature_first_alert_fraction": 0.725,
+      "hourly_false_positive_rate": 0.17053904611445536,
+      "hourly_auroc": 0.790575102598611,
+      "hourly_auprc": 0.030422338313941637,
+      "hourly_brier": 0.008241692181554818,
+      "threshold": 0.005848799009419692,
+      "threshold_infinite": false,
+      "site": "B",
+      "policy": "source_hourly"
+    },
+    {
+      "patients": 1176,
+      "nonseptic_patients": 1136,
+      "septic_patients": 40,
+      "false_alerted_patients": 151,
+      "patient_false_alert_rate": 0.1329225352112676,
+      "patient_false_alert_rate_ci95": [
+        0.11371088927657953,
+        0.154056834202866
+      ],
+      "timely_detected_patients": 23,
+      "six_hour_window_sensitivity": 0.575,
+      "sensitivity_ci95": [
+        0.4089005804269633,
+        0.7295709687311371
+      ],
+      "timely_first_alert_sensitivity": 0.05,
+      "premature_first_alert_fraction": 0.575,
+      "hourly_false_positive_rate": 0.060278375507313485,
+      "hourly_auroc": 0.790575102598611,
+      "hourly_auprc": 0.030422338313941637,
+      "hourly_brier": 0.008241692181554818,
+      "threshold": 0.024053962749125714,
+      "threshold_infinite": false,
+      "site": "B",
+      "policy": "source_patient"
+    },
+    {
+      "patients": 1176,
+      "nonseptic_patients": 1136,
+      "septic_patients": 40,
+      "false_alerted_patients": 148,
+      "patient_false_alert_rate": 0.13028169014084506,
+      "patient_false_alert_rate_ci95": [
+        0.11124406325162423,
+        0.15125626457778843
+      ],
+      "timely_detected_patients": 23,
+      "six_hour_window_sensitivity": 0.575,
+      "sensitivity_ci95": [
+        0.4089005804269633,
+        0.7295709687311371
+      ],
+      "timely_first_alert_sensitivity": 0.05,
+      "premature_first_alert_fraction": 0.575,
+      "hourly_false_positive_rate": 0.059597417808405745,
+      "hourly_auroc": 0.790575102598611,
+      "hourly_auprc": 0.030422338313941637,
+      "hourly_brier": 0.008241692181554818,
+      "threshold": 0.024369185399625914,
+      "threshold_infinite": false,
+      "site": "B",
+      "policy": "target_patient"
+    }
+  ],
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "python": "3.12.14",
+  "elapsed_seconds": 12.40155816078186,
+  "restoration_note": "Analysis restored from logged code after a temporary runtime reset; development rerun, not a new independent validation."
+}

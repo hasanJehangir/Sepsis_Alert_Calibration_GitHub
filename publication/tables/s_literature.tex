@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering\small
+\renewcommand{\arraystretch}{1.2}
+\caption{Focused literature positioning; differing tasks prevent direct performance ranking.}\label{tab:sliterature}
+\begin{tabular}{p{.19\linewidth}p{.35\linewidth}p{.36\linewidth}}
+\toprule
+Study & Relevant contribution & Relationship to this evaluation \\
+\midrule
+Reyna et al., 2020 \cite{reyna} & Public early-sepsis prediction challenge and clinically weighted evaluation. & Supplies source data and labels; this study does not report official Challenge utility. \\
+Wong et al., 2021 \cite{wong} & External assessment of a deployed proprietary sepsis model. & Motivates transport assessment; different model, population and outcome definition. \\
+Shashikumar et al., 2021 \cite{composer} & Uncertainty-aware sepsis prediction with abstention. & Operational caution is shared; their learned system is not reproduced here. \\
+Moor et al., 2023 \cite{moor} & Retrospective deep-learning development and validation across international sites. & Addresses broader generalization; published sensitivity is not a like-for-like comparator. \\
+Gupta et al., 2024 \cite{gupta} & SepsisAI design emphasizing reduced false alarms. & Motivates temporal aggregation; our recurrent three-of-five rule is only an adaptation. \\
+Rockenschaub et al., 2024 \cite{rockenschaub} & Multi-institution training and evaluation of ICU prediction transport. & Broader datasets and tasks; current models use single-source training with threshold adaptation. \\
+Do et al., 2026 \cite{do} & Explicit comparison of sepsis evaluation strategies. & Closest evaluation context; current focus separates admission exposure, emissions and first timing. \\
+van de Water et al., 2024 \cite{yaib} & Reproducible multi-dataset clinical benchmark. & Supplies derivative external labels; causal raw predictor harmonization is separately audited. \\
+\bottomrule
+\end{tabular}
+\end{table}

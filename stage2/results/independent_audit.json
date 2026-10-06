@@ -1,0 +1,13 @@
+{
+  "status": "PASSED",
+  "natural_duration_main_rows_checked": 72,
+  "endpoint_count_checks": 504,
+  "hourly_denominator_and_crossing_checks": 144,
+  "pilot_overlap": 0,
+  "cohort_records": 36658,
+  "cohort_hashes_unique": true,
+  "manifest_roles_preserved": true,
+  "completed_signature": "b872b7e59718f987cfe7387cb930d67f842934872445cee9ffb91569c1a1f92d",
+  "audit_code_sha256": "cf659047cfc94bdf14b708da510e593d41f68fcf72feabda3fd879fdefab4a34",
+  "scope": "Direct evaluation from hourly predictions; does not independently validate raw preprocessing, model training, or all capped/budget rows."
+}

@@ -1,0 +1,22 @@
+\begin{table}[tbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\caption{External public-demo evaluation: full-feature boosting, native inputs, hourly emission.}\label{tab:external}
+\begin{tabular}{lllrrr}
+\toprule
+Inputs & Source & Threshold & \makecell{False alerts\\{}$n/N$ (\%)} & \makecell{Any6\\{}$n/N$ (\%)} & \makecell{First6\\{}$n/N$ (\%)} \\
+\midrule
+Initial & A & Source & 122/444 (27.5) & 3/17 (17.6) & 0/17 (0.0) \\
+Initial & A & Local & 42/444 (9.5) & 1/17 (5.9) & 1/17 (5.9) \\
+Initial & B & Source & 122/444 (27.5) & 4/17 (23.5) & 1/17 (5.9) \\
+Initial & B & Local & 37/444 (8.3) & 0/17 (0.0) & 0/17 (0.0) \\
+Amended & A & Source & 128/444 (28.8) & 5/17 (29.4) & 2/17 (11.8) \\
+Amended & A & Local & 47/444 (10.6) & 0/17 (0.0) & 0/17 (0.0) \\
+Amended & B & Source & 131/444 (29.5) & 6/17 (35.3) & 3/17 (17.6) \\
+Amended & B & Local & 38/444 (8.6) & 1/17 (5.9) & 1/17 (5.9) \\
+\bottomrule
+\end{tabular}
+\par\vspace{3pt}\begin{minipage}{\linewidth}\footnotesize Source denotes the training Challenge hospital; both models use the same external test cohort. Local thresholds use 187 nonseptic calibration people. The amended run is exploratory.\end{minipage}
+\end{table}

@@ -1,0 +1,16 @@
+{
+  "analysis_name": "sepsis_patient_calibration_stage2",
+  "version": 1,
+  "seed": 20260929,
+  "alpha": 0.1,
+  "models": ["logistic", "hgb", "hgb_no_observation_features"],
+  "source_sites": ["A", "B"],
+  "caps": [null, 24, 48, 72],
+  "local_budgets": [100, 250, 500],
+  "calibration_seeds": [20261001, 20261002, 20261003, 20261004, 20261005, 20261006, 20261007, 20261008, 20261009, 20261010, 20261011, 20261012, 20261013, 20261014, 20261015, 20261016, 20261017, 20261018, 20261019, 20261020],
+  "bootstrap_draws": 2000,
+  "sensitivity_target": 0.8,
+  "hgb": {"max_iter": 200, "learning_rate": 0.07, "max_leaf_nodes": 15, "min_samples_leaf": 40, "l2_regularization": 1.0, "early_stopping": false, "random_state": 20260929},
+  "logistic": {"C": 1.0, "solver": "lbfgs", "max_iter": 1000, "tol": 0.00001},
+  "threads": 4
+}

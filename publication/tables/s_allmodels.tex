@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\caption{Admission-threshold transport for every model family.}\label{tab:sallmodels}
+\begin{tabular}{lllrrr}
+\toprule
+Transfer & Model & Threshold & False alerts (\%) [CI] & Any6 (\%) & First6 (\%) \\
+\midrule
+A$\to$B & Logistic regression & Source & 8.6 [7.7--9.6] & 29.2 & 6.5 \\
+A$\to$B & Logistic regression & Local & 10.4 [9.4--11.5] & 31.8 & 6.5 \\
+A$\to$B & Full boosting & Source & 7.5 [6.7--8.4] & 42.9 & 5.2 \\
+A$\to$B & Full boosting & Local & 10.4 [9.4--11.5] & 44.8 & 5.2 \\
+A$\to$B & Reduced boosting & Source & 5.8 [5.1--6.6] & 16.2 & 3.2 \\
+A$\to$B & Reduced boosting & Local & 10.5 [9.5--11.5] & 24.0 & 5.8 \\
+B$\to$A & Logistic regression & Source & 48.9 [47.2--50.6] & 58.1 & 6.5 \\
+B$\to$A & Logistic regression & Local & 10.2 [9.2--11.3] & 22.7 & 5.4 \\
+B$\to$A & Full boosting & Source & 31.2 [29.6--32.7] & 58.8 & 7.3 \\
+B$\to$A & Full boosting & Local & 11.1 [10.1--12.2] & 36.2 & 7.7 \\
+B$\to$A & Reduced boosting & Source & 32.0 [30.5--33.6] & 48.1 & 7.7 \\
+B$\to$A & Reduced boosting & Local & 10.5 [9.5--11.6] & 14.2 & 3.8 \\
+\bottomrule
+\end{tabular}
+\par\vspace{3pt}\begin{minipage}{\linewidth}\footnotesize Natural duration, nominal 10\% calibration; confidence intervals are exact binomial intervals.\end{minipage}
+\end{table}

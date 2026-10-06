@@ -1,0 +1,24 @@
+\begin{table}[tbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\caption{Exploratory emission rules at local nominal 10\% admission calibration.}\label{tab:policies}
+\begin{tabular}{llrrrrr}
+\toprule
+Transfer & Rule & \makecell{Negative\\{}emissions} & \makecell{Per 100\\{}hours} & \makecell{False\\{}alerts (\%)} & Any6 (\%) & First6 (\%) \\
+\midrule
+A$\to$B & Hourly & 4,093 & 3.690 & 10.4 & 44.8 & 5.2 \\
+A$\to$B & Single & 362 & 0.326 & 10.4 & 5.2 & 5.2 \\
+A$\to$B & Silence 4 h & 1,298 & 1.170 & 10.4 & 43.5 & 5.2 \\
+A$\to$B & Silence 6 h & 962 & 0.867 & 10.4 & 43.5 & 5.2 \\
+A$\to$B & Three-of-five & 5,145 & 4.639 & 10.7 & 45.5 & 7.8 \\
+B$\to$A & Hourly & 1,736 & 1.542 & 11.1 & 36.2 & 7.7 \\
+B$\to$A & Single & 380 & 0.338 & 11.1 & 7.7 & 7.7 \\
+B$\to$A & Silence 4 h & 737 & 0.655 & 11.1 & 34.6 & 7.7 \\
+B$\to$A & Silence 6 h & 615 & 0.546 & 11.1 & 33.8 & 7.7 \\
+B$\to$A & Three-of-five & 2,915 & 2.590 & 11.7 & 37.7 & 5.4 \\
+\bottomrule
+\end{tabular}
+\par\vspace{3pt}\begin{minipage}{\linewidth}\footnotesize Full-feature boosting; denominators match Table~\ref{tab:transport}. Three-of-five uses its own transformed-score threshold and emits at each qualifying hour.\end{minipage}
+\end{table}

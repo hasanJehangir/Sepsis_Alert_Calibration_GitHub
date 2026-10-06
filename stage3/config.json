@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "stage": "EXPLORATORY_AFTER_STAGE2_TEST_INSPECTION",
+  "policies": ["hourly", "single", "silence4", "silence6", "three_of_five"],
+  "alphas": [0.05, 0.10, 0.20],
+  "fixed_anchors": ["source_hourly", "source_patient", "target_patient_all", "source_sensitivity80", "probability_0_5"],
+  "bootstrap_draws": 2000,
+  "seed": 20260930
+}

@@ -1,0 +1,46 @@
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{longtable}{p{.19\linewidth}p{.43\linewidth}p{.30\linewidth}}
+\caption{External raw-channel harmonization. Standardized system units were checked where present; missing channels remain unavailable.}\label{tab:smapping}\\
+\toprule Channel & Raw source & Mapping note \\ \midrule
+\endfirsthead
+\multicolumn{3}{l}{Table S7 continued}\\
+\toprule Channel & Raw source & Mapping note \\ \midrule
+\endhead
+\bottomrule\endfoot
+HR & vitalPeriodic heartrate & Last available value \\
+O2Sat & vitalPeriodic sao2 & Periodic peripheral saturation \\
+Temp & vitalPeriodic temperature; amended nurseCharting temperature & Celsius; nursing Fahrenheit converted \\
+SBP & vitalPeriodic systemicsystolic; vitalAperiodic noninvasivesystolic & Merge by availability time \\
+MAP & vitalPeriodic systemicmean; vitalAperiodic noninvasivemean & Merge by availability time \\
+DBP & vitalPeriodic systemicdiastolic; vitalAperiodic noninvasivediastolic & Merge by availability time \\
+Resp & vitalPeriodic respiration & Last available value \\
+EtCO2 & vitalPeriodic etco2 & Last available value \\
+BaseExcess & lab Base Excess / Base Deficit & Negate Base Deficit \\
+HCO3 & lab HCO3 & Excludes Total CO2 \\
+FiO2 & lab FiO2; amended respiratoryCharting FiO2 fields & Values above 1 divided by 100 \\
+pH & lab pH & No scale conversion \\
+PaCO2 & lab paCO2 & mm Hg \\
+SaO2 & lab O2 Sat (\%) & Arterial laboratory saturation \\
+AST & lab AST (SGOT) & Units/L \\
+BUN & lab BUN & mg/dL \\
+Alkalinephos & lab alkaline phos. & Units/L \\
+Calcium & lab calcium & mg/dL \\
+Chloride & lab chloride & mmol/L \\
+Creatinine & lab creatinine & mg/dL \\
+Bilirubin direct & lab direct bilirubin & mg/dL; distinct from total \\
+Glucose & lab glucose & mg/dL \\
+Lactate & lab lactate & Native scale or masked; source-unit ambiguity \\
+Magnesium & lab magnesium & Native scale or masked; source-unit ambiguity \\
+Phosphate & lab phosphate & mg/dL \\
+Potassium & lab potassium & mmol/L \\
+Bilirubin total & lab total bilirubin & mg/dL; distinct from direct \\
+TroponinI & lab troponin - I & ng/mL; excludes troponin-T \\
+Hct & lab Hct & Percent \\
+Hgb & lab Hgb & g/dL \\
+PTT & lab PTT & Seconds \\
+WBC & lab WBC x 1000 & K/mcL \\
+Fibrinogen & lab fibrinogen & mg/dL \\
+Platelets & lab platelets x 1000 & K/mcL \\
+\end{longtable}
+\normalsize

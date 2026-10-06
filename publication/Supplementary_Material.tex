@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,array,graphicx,makecell,longtable}
+\usepackage[margin=22mm]{geometry}
+\usepackage{microtype,placeins}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\topfraction}{.95}
+\renewcommand{\textfraction}{.05}
+\renewcommand{\floatpagefraction}{.8}
+\raggedbottom
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\title{Supplementary material\\\large Admission-level false-alert calibration and warning timing in cross-hospital sepsis prediction}
+\author{Hasan Jehangir}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Analysis chronology and evidence scope}
+Figure~\ref{fig:sflow} distinguishes the locked primary analysis, exploratory rule comparisons, original external run and post-test mapping amendment. Protocols were locally timestamped and hashed; they were not independently preregistered. Comparison rows share underlying models and admissions and must not be treated as independent study replications. The public-demo evaluation used no additional model fitting. Source scores and thresholds were retained unchanged except for explicitly labeled local threshold calibration.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=.91\linewidth]{figures/s_study_flow.pdf}
+\caption{Cohort flow and analysis chronology. The amended external run reused the same examined external test cohort. Counts refer to this study, not the full underlying resources.}
+\label{fig:sflow}
+\end{figure}
+\FloatBarrier
+
+\section{Focused literature comparison}
+Table~\ref{tab:sliterature} summarizes directly relevant work. This is a focused contextual review, not a systematic review or a head-to-head ranking. Published metrics are omitted because differing eligibility, timing and warning definitions preclude direct comparison. The present work adds a transparent empirical comparison on fixed predictions rather than an original conformal procedure or a reproduction of another clinical system.
+
+\input{tables/s_literature.tex}
+\FloatBarrier
+
+\section{Supplementary model and calibration specification}
+The full 120-feature vector has 34 last-observed physiology values; Age, Gender, HospAdmTime and ICULOS; 34 current-observation flags; 34 elapsed-observation times truncated at 168 hours; and means and changes for HR, O2Sat, Temp, SBP, MAP, DBP and Resp over six hours. Rolling features use the current hour and preceding history. Data before ICU hour six provide feature history but are not scored. No future interpolation, post-onset feature rows or outcome-derived predictors are used.
+
+Logistic preprocessing retained entirely unobserved training columns using the imputer's empty-feature option, then standardized the imputed training representation. The L2 logistic optimizer used tolerance $10^{-5}$, maximum 1,000 iterations and $C=1$. Both boosting representations used 200 iterations, learning rate 0.07, maximum 15 leaves, minimum 40 observations per leaf, L2 regularization 1, disabled early stopping and seed 20260929. The reduced representation removed 68 explicit measurement-process features and ICULOS, leaving 51 features. All fits completed without recorded fitting warnings. The training outcome was the released six-hour prediction label on strictly pre-onset scoring rows.
+
+Calibration score order statistics use rank $\lceil(n+1)(1-\alpha)\rceil$ with strict exceedance; an unattainable rank produces an infinite threshold. The conventional empirical comparator uses $\lceil n(1-\alpha)\rceil$. For an exchangeable nonseptic admission with the same scoring and observation definition, the finite-rank construction supplies marginal false-alert control \cite{angelopoulos}. It is not a guarantee on realized test percentages or hospital transfer. Calibration of admission exposure also does not make hourly scores calibrated probabilities \cite{vancalster}.
+
+Suppression rules emit their first crossing and then require an interval of at least four or six hours. Single emission retains only the first crossing. Recurrent three-of-five eligibility requires at least three strictly above-threshold scores in the current and preceding four scoring hours; unavailable startup positions have value $-\infty$. Every eligible hour emits. It does not implement resetting, acknowledgement or a new episode detector.
+
+The 660 follow-up rows include unchanged source-hourly, source-admission, all-local admission and source-calibration sensitivity-reference thresholds, plus a probability-scale reference of 0.5. The sensitivity reference targeted at least 80\% empirical any-window sensitivity in source calibration; it is not a test guarantee. Separate source/local admission targets of 5\%, 10\% and 20\% were also evaluated. The 0.5 reference and three-of-five adaptation must not be presented as reproducing another published system.
+
+Natural follow-up was primary. For each administrative cap, nonseptic observation was truncated at the cap, and cases with onset after the cap were excluded from the conditional case denominator. Calibrating and evaluating under the same cap changes the estimand; these results do not establish prospective follow-up performance. All retained CSV tables include cap and cohort fields.
+
+\section{Additional quantitative results}
+Table~\ref{tab:sdisc} reports discrimination for every transferred model; Table~\ref{tab:sbud} reports calibration-pool variability; Table~\ref{tab:spair} reports paired recurrent-rule comparisons. Exact intervals for individual proportions use binomial methods \cite{clopper}. Paired percentile bootstrap intervals \cite{efron} are conditional on frozen fits and thresholds. They do not propagate training or calibration uncertainty, hospital clustering or outcome misclassification. AP should be read with the outcome prevalence \cite{saito}.
+
+\input{tables/s_discrimination.tex}
+\input{tables/s_budgets.tex}
+\input{tables/s_paired.tex}
+\FloatBarrier
+
+Table~\ref{tab:sextdisc} retains both native and masked-unit external variants for all models and both runs. There is no favorable-variant selection. Table~\ref{tab:sallmodels} shows source and local admission operating points for all Challenge model families. Full emission-rule and calibration-condition results remain in the CSV package, including low-sensitivity outcomes.
+
+\input{tables/s_external_discrimination.tex}
+\input{tables/s_allmodels.tex}
+\FloatBarrier
+
+\section{External cohort, label and mapping audit}
+\subsection{Resource selection and identities}
+The eICU demo v2.0.1 is an open-access demonstration of the database described by Pollard et al. \cite{eicudemo,eicu}. YAIB labels were pinned to repository commit \texttt{0d1d39a131a65f453aeb019828394396d6bfd171} \cite{yaib}. Its imported static file contained 896 selected unit stays. Within each \texttt{uniquepid}, the smallest SHA-256 value of \texttt{20261001|stay|<stay\_id>} selected one stay without using its outcome, leaving 677 people. Twenty-one early/left-censored records were excluded, leaving 656 eligible people and 28,045 scoring hours.
+
+A SHA-256 fraction of \texttt{20261001|role|<uniquepid>} assigned approximately 30\% to calibration and 70\% to test without stratification or reseeding. The resulting counts were 195 calibration people (187 nonseptic, eight cases) and 461 test people (444 nonseptic, 17 cases); person overlap between roles was zero. Test scoring hours were 19,645, of which 102 were positive six-hour-horizon hours. The demo's selected population is not a clinical deployment-prevalence sample.
+
+The public dataset description mentions 20 hospitals, whereas the downloaded patient/hospital tables contain 186 distinct surrogate hospital identifiers across 2,520 stays and 1,841 people. The table joins had no missing hospital identifiers. This discrepancy is unresolved: surrogate identifiers are not asserted to represent 186 independently verified hospitals. Neither real hospital identities nor cross-resource patient linkages establish independence from Challenge A/B. Calibration and test were not separated by hospital.
+
+\subsection{Operational label differences}
+The Challenge's operational infection definition pairs culture and antibiotic information, with its documented SOFA window. YAIB's modified eICU sepsis target uses continuous antibiotics as the infection proxy and a wider SOFA window. In the retained implementation, the SOFA windows relative to suspected infection were $[-24,+12]$ hours for Challenge labeling and $[-48,+24]$ for the modified eICU benchmark. They are not equivalent clinical labels, despite their common Sepsis-3 motivation \cite{singer,reyna,yaib}.
+
+Imported external outcome grids extend six hours before and after the first benchmark event. The event was reconstructed as first positive grid hour plus six, with scoring restricted to earlier hours. The study checked ordered, binary, hourly grids and positive-run integrity, but did not independently recalculate SOFA, establish suspicion of infection from full raw charts or adjudicate sepsis clinically. Upstream YAIB selection excludes inadequately observed stays, early onset and hospitals with no labeled sepsis. Those choices can induce selection bias and change the case mix.
+
+\subsection{Causal predictor availability and units}
+A row at ICU hour $h$ uses nonnegative events with available offset strictly below $60h$ minutes. Events enter bin $\lfloor\mathrm{offset}/60\rfloor+1$. Laboratory availability is the maximum of result and revision offsets when provided; chart availability is the maximum of event and entry offsets. This conservatively delays corrected/late-entered values but cannot recover a superseded earlier result. Last finite available values are retained with deterministic ties. Pre-ICU events are excluded. Follow-up ends at the minimum of the supplied grid, completed discharge hours and 168 hours.
+
+Age above 89 is coded as 100 to match the source convention. Female and male map to zero and one; unknown gender remains missing. HospAdmTime is hospital-admission offset divided by 60; ICU hour is the completed-hour index. Arterial and noninvasive pressures are merged by availability time. Periodic oxygen saturation maps to O2Sat, while laboratory arterial oxygen saturation maps separately to SaO2. Bicarbonate uses HCO3 rather than Total CO2; TroponinI uses only troponin-I. Fractional FiO$_2$ is retained, and values above one are divided by 100. Base Deficit is negated when used as Base Excess.
+
+The original adapter used periodic temperature and laboratory FiO$_2$. The exploratory amendment additionally mapped nursing temperature in Celsius/Fahrenheit and three respiratory FiO$_2$ fields, using conservative chart availability. Celsius takes precedence for duplicate C/F nursing entries, and Fahrenheit is converted to Celsius. Native lactate/magnesium scales were retained because printed source units and typical numeric scales were inconsistent; the parallel masked variant sets both channels missing. Neither variant is selected as definitive. Table~\ref{tab:smapping} gives channel mappings; the retained audit CSVs give exact source field counts and rejected-unit checks.
+
+\input{tables/s_mapping.tex}
+\FloatBarrier
+
+\section{Reproducibility and human-review scope}
+Source models, manifest assignments, protocol locks, threshold tables and completed analysis metadata were preserved. Verification covered strict thresholds, causal summaries, startup eligibility, silencing boundaries and first-warning invariants. A direct audit reproduced 72 natural-duration threshold anchors. External adapter checks tested corrected-result offsets, completed-hour bins, unit handling and frozen-model prediction consistency. Archived isolated reruns matched 18 CSV tables, 24 prediction vectors and eight feature/hour/label arrays (50 comparisons).
+
+The author reports positive clinical feedback from Dr. Sohaib Ali and Dr. Hasnain Ali Shah and reports statistical review with no issues. These statements describe feedback reported to the research team; they are not a documented blinded clinician study, sepsis-label adjudication, ethics approval or formal journal peer review. Detailed qualifications, review dates, scope and itemized responses are not recorded in the computational outputs. Reviewer acknowledgement and any coauthorship require accurate contribution and permission information at submission. The historical automated completion flags were not rewritten as human-review certificates.
+
+The supplied source package regenerates publication tables and figures from retained results. It does not claim to retrain models from raw data on opening the LaTeX project. Full computational reproduction uses the separate Stage 3 and Stage 4 research archives, with resource licenses and versioned inputs retained. No code, data, results or manuscript material from CAPMI was used.
+
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,38 @@
+\begin{table}[htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\caption{All external hourly discrimination results, without model or input-variant selection.}\label{tab:sextdisc}
+\begin{tabular}{llllrrr}
+\toprule
+Inputs & Source & Model & Variant & AUROC & AP & Brier \\
+\midrule
+Initial & A & Logistic & Native & 0.504 & 0.0050 & 0.0056 \\
+Initial & A & Logistic & Masked & 0.491 & 0.0049 & 0.0055 \\
+Initial & A & Full HGB & Native & 0.566 & 0.0063 & 0.0093 \\
+Initial & A & Full HGB & Masked & 0.551 & 0.0061 & 0.0090 \\
+Initial & A & Reduced HGB & Native & 0.627 & 0.0099 & 0.0052 \\
+Initial & A & Reduced HGB & Masked & 0.616 & 0.0072 & 0.0052 \\
+Initial & B & Logistic & Native & 0.456 & 0.0046 & 0.0052 \\
+Initial & B & Logistic & Masked & 0.453 & 0.0045 & 0.0052 \\
+Initial & B & Full HGB & Native & 0.519 & 0.0051 & 0.0065 \\
+Initial & B & Full HGB & Masked & 0.525 & 0.0051 & 0.0064 \\
+Initial & B & Reduced HGB & Native & 0.596 & 0.0062 & 0.0053 \\
+Initial & B & Reduced HGB & Masked & 0.600 & 0.0065 & 0.0052 \\
+Amended & A & Logistic & Native & 0.543 & 0.0055 & 0.0062 \\
+Amended & A & Logistic & Masked & 0.533 & 0.0054 & 0.0058 \\
+Amended & A & Full HGB & Native & 0.586 & 0.0059 & 0.0087 \\
+Amended & A & Full HGB & Masked & 0.581 & 0.0058 & 0.0083 \\
+Amended & A & Reduced HGB & Native & 0.644 & 0.0084 & 0.0053 \\
+Amended & A & Reduced HGB & Masked & 0.635 & 0.0071 & 0.0052 \\
+Amended & B & Logistic & Native & 0.476 & 0.0048 & 0.0064 \\
+Amended & B & Logistic & Masked & 0.476 & 0.0047 & 0.0062 \\
+Amended & B & Full HGB & Native & 0.545 & 0.0055 & 0.0079 \\
+Amended & B & Full HGB & Masked & 0.551 & 0.0056 & 0.0074 \\
+Amended & B & Reduced HGB & Native & 0.602 & 0.0062 & 0.0064 \\
+Amended & B & Reduced HGB & Masked & 0.604 & 0.0064 & 0.0060 \\
+\bottomrule
+\end{tabular}
+\par\vspace{3pt}\begin{minipage}{\linewidth}\footnotesize All rows use 19,645 test hours; positive-hour prevalence is 102/19,645 (0.519\%). Masked inputs set lactate and magnesium unavailable; they do not resolve unit provenance.\end{minipage}
+\end{table}

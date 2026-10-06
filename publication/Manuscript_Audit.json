@@ -1,0 +1,354 @@
+{
+  "status": "PASS",
+  "checks_count": 58,
+  "checks": [
+    {
+      "check": "Challenge cohort total",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Challenge test cases and admissions",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Preserved complete policy comparisons",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Challenge primary patient_false_alert_rate count/rate consistency",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Challenge primary patient_false_alert_rate exact 95% intervals",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Challenge primary window6_sensitivity count/rate consistency",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Challenge primary window6_sensitivity exact 95% intervals",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Challenge primary first6_sensitivity count/rate consistency",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Challenge primary first6_sensitivity exact 95% intervals",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Challenge primary first-window count cannot exceed any-window count",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Policy follow-up patient_false_alert_rate count/rate consistency",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Policy follow-up patient_false_alert_rate exact 95% intervals",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Policy follow-up window6_sensitivity count/rate consistency",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Policy follow-up window6_sensitivity exact 95% intervals",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Policy follow-up first6_sensitivity count/rate consistency",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Policy follow-up first6_sensitivity exact 95% intervals",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Policy follow-up first-window count cannot exceed any-window count",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "External patient_false_alert_rate count/rate consistency",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "External patient_false_alert_rate exact 95% intervals",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "External window6_sensitivity count/rate consistency",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "External window6_sensitivity exact 95% intervals",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "External first6_sensitivity count/rate consistency",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "External first6_sensitivity exact 95% intervals",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "External first-window count cannot exceed any-window count",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Main transport A source_hourly",
+      "passed": true,
+      "details": {
+        "counts": [
+          794,
+          86,
+          15
+        ]
+      }
+    },
+    {
+      "check": "Main transport A source_patient",
+      "passed": true,
+      "details": {
+        "counts": [
+          261,
+          66,
+          8
+        ]
+      }
+    },
+    {
+      "check": "Main transport A target_patient_all",
+      "passed": true,
+      "details": {
+        "counts": [
+          362,
+          69,
+          8
+        ]
+      }
+    },
+    {
+      "check": "Main transport B source_hourly",
+      "passed": true,
+      "details": {
+        "counts": [
+          2064,
+          216,
+          27
+        ]
+      }
+    },
+    {
+      "check": "Main transport B source_patient",
+      "passed": true,
+      "details": {
+        "counts": [
+          1066,
+          153,
+          19
+        ]
+      }
+    },
+    {
+      "check": "Main transport B target_patient_all",
+      "passed": true,
+      "details": {
+        "counts": [
+          380,
+          94,
+          20
+        ]
+      }
+    },
+    {
+      "check": "Emission counts A",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Suppression preserves exposure and first timing A",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Single any-window equals first-window A",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Reported four-hour reduction A",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Emission counts B",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Suppression preserves exposure and first timing B",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Single any-window equals first-window B",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Reported four-hour reduction B",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "External Initial/A/source_patient",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "External Initial/A/local_patient",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "External Initial/B/source_patient",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "External Initial/B/local_patient",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "External Amended exploratory/A/source_patient",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "External Amended exploratory/A/local_patient",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "External Amended exploratory/B/source_patient",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "External Amended exploratory/B/local_patient",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "All external test-hour denominators",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Reported native external AUROC ranges",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Paired local minus source numerical result false_alert",
+      "passed": true,
+      "details": {
+        "percentage_points": [
+          -20.0,
+          -21.4,
+          -18.6
+        ]
+      }
+    },
+    {
+      "check": "Paired local minus source numerical result window6",
+      "passed": true,
+      "details": {
+        "percentage_points": [
+          -22.7,
+          -28.1,
+          -17.7
+        ]
+      }
+    },
+    {
+      "check": "Paired local minus source numerical result first6",
+      "passed": true,
+      "details": {
+        "percentage_points": [
+          0.4,
+          -3.8,
+          4.6
+        ]
+      }
+    },
+    {
+      "check": "Manuscript uses directly rounded paired false-alert difference, not difference of rounded rates",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "All 21 bibliography entries verified",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "No missing or unused bibliography entries",
+      "passed": true,
+      "details": {
+        "unresolved": [],
+        "unused": []
+      }
+    },
+    {
+      "check": "Twenty distinct DOI entries plus one proceedings reference",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Frozen result file identities",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Sepsis_Alert_Transport_Manuscript compile has no unresolved citations/references, fatal or overflow errors",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "Supplementary_Material compile has no unresolved citations/references, fatal or overflow errors",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "scope": "Presentation/numerical consistency audit; not independent model validation, clinical adjudication, or formal human peer review."
+}

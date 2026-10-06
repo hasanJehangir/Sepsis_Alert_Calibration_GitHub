@@ -1,0 +1,212 @@
+[
+  {
+    "key": "singer",
+    "doi": "10.1001/jama.2016.0287",
+    "title": "The Third International Consensus Definitions for Sepsis and Septic Shock (Sepsis-3)",
+    "year": 2016,
+    "metadata_source": "https://api.crossref.org/works/10.1001/jama.2016.0287",
+    "author_count": 19,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "fleuren",
+    "doi": "10.1007/s00134-019-05872-y",
+    "title": "Machine learning for the prediction of sepsis: a systematic review and meta-analysis of diagnostic test accuracy",
+    "year": 2020,
+    "metadata_source": "https://api.crossref.org/works/10.1007/s00134-019-05872-y",
+    "author_count": 12,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "reyna",
+    "doi": "10.1097/CCM.0000000000004145",
+    "title": "Early Prediction of Sepsis From Clinical Data: The PhysioNet/Computing in Cardiology Challenge 2019",
+    "year": 2020,
+    "metadata_source": "https://api.crossref.org/works/10.1097/CCM.0000000000004145",
+    "author_count": 8,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "wong",
+    "doi": "10.1001/jamainternmed.2021.2626",
+    "title": "External Validation of a Widely Implemented Proprietary Sepsis Prediction Model in Hospitalized Patients",
+    "year": 2021,
+    "metadata_source": "https://api.crossref.org/works/10.1001/jamainternmed.2021.2626",
+    "author_count": 12,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "moor",
+    "doi": "10.1016/j.eclinm.2023.102124",
+    "title": "Predicting sepsis using deep learning across international sites: a retrospective development and validation study",
+    "year": 2023,
+    "metadata_source": "https://api.crossref.org/works/10.1016/j.eclinm.2023.102124",
+    "author_count": 8,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "rockenschaub",
+    "doi": "10.1097/CCM.0000000000006359",
+    "title": "The Impact of Multi-Institution Datasets on the Generalizability of Machine Learning Prediction Models in the ICU",
+    "year": 2024,
+    "metadata_source": "https://api.crossref.org/works/10.1097/CCM.0000000000006359",
+    "author_count": 7,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "do",
+    "doi": "10.2196/72083",
+    "title": "The Impact of Evaluation Strategy on Sepsis Prediction Model Performance Metrics in Intensive Care Data: Retrospective Cohort Study",
+    "year": 2026,
+    "metadata_source": "https://api.crossref.org/works/10.2196/72083",
+    "author_count": 8,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "composer",
+    "doi": "10.1038/s41746-021-00504-6",
+    "title": "Artificial intelligence sepsis prediction algorithm learns to say “I don’t know”",
+    "year": 2021,
+    "metadata_source": "https://api.crossref.org/works/10.1038/s41746-021-00504-6",
+    "author_count": 4,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "gupta",
+    "doi": "10.1371/journal.pdig.0000569",
+    "title": "Improving sepsis prediction in intensive care with SepsisAI: A clinical decision support system with a focus on minimizing false alarms",
+    "year": 2024,
+    "metadata_source": "https://api.crossref.org/works/10.1371/journal.pdig.0000569",
+    "author_count": 4,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "vancalster",
+    "doi": "10.1186/s12916-019-1466-7",
+    "title": "Calibration: the Achilles heel of predictive analytics",
+    "year": 2019,
+    "metadata_source": "https://api.crossref.org/works/10.1186/s12916-019-1466-7",
+    "author_count": 5,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "angelopoulos",
+    "doi": "10.1561/2200000101",
+    "title": "Conformal Prediction: A Gentle Introduction",
+    "year": 2023,
+    "metadata_source": "https://api.crossref.org/works/10.1561/2200000101",
+    "author_count": 2,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "clopper",
+    "doi": "10.1093/biomet/26.4.404",
+    "title": "The use of confidence or fiducial limits illustrated in the case of the binomial",
+    "year": 1934,
+    "metadata_source": "https://api.crossref.org/works/10.1093/biomet/26.4.404",
+    "author_count": 2,
+    "status": "verified",
+    "note": "Author surnames normalized from registry uppercase to conventional capitalization; exact primary journal metadata verified."
+  },
+  {
+    "key": "efron",
+    "doi": "10.1214/aos/1176344552",
+    "title": "Bootstrap Methods: Another Look at the Jackknife",
+    "year": 1979,
+    "metadata_source": "https://api.crossref.org/works/10.1214/aos/1176344552",
+    "author_count": 1,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "eicu",
+    "doi": "10.1038/sdata.2018.178",
+    "title": "The eICU Collaborative Research Database, a freely available multi-center database for critical care research",
+    "year": 2018,
+    "metadata_source": "https://api.crossref.org/works/10.1038/sdata.2018.178",
+    "author_count": 6,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "saito",
+    "doi": "10.1371/journal.pone.0118432",
+    "title": "The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets",
+    "year": 2015,
+    "metadata_source": "https://api.crossref.org/works/10.1371/journal.pone.0118432",
+    "author_count": 2,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "tripod",
+    "doi": "10.1136/bmj-2023-078378",
+    "title": "TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods",
+    "year": 2024,
+    "metadata_source": "https://api.crossref.org/works/10.1136/bmj-2023-078378",
+    "author_count": 34,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "decideai",
+    "doi": "10.1038/s41591-022-01772-9",
+    "title": "Reporting guideline for the early-stage clinical evaluation of decision support systems driven by artificial intelligence: DECIDE-AI",
+    "year": 2022,
+    "metadata_source": "https://api.crossref.org/works/10.1038/s41591-022-01772-9",
+    "author_count": 155,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "physionet",
+    "doi": "10.1038/s44360-026-00096-z",
+    "title": "PhysioNet as a global platform for biomedical research",
+    "year": 2026,
+    "metadata_source": "https://api.crossref.org/works/10.1038/s44360-026-00096-z",
+    "author_count": 9,
+    "status": "verified",
+    "note": "First six named authors followed by et al. where applicable; corrected complete page ranges against primary bibliographic sources for JAMA records and Efron."
+  },
+  {
+    "key": "reynadata",
+    "doi": "10.13026/v64v-d857",
+    "title": "Early Prediction of Sepsis from Clinical Data: The PhysioNet/Computing in Cardiology Challenge 2019",
+    "year": 2019,
+    "metadata_source": "https://api.datacite.org/dois/10.13026/v64v-d857",
+    "status": "verified",
+    "note": "PhysioNet recommended citation and resource release use 2019; DataCite publicationYear is 2022. The version-specific source citation takes precedence. DOI and author metadata agree.",
+    "dataset_source": "https://physionet.org/content/challenge-2019/1.0.0/",
+    "registry_publication_year": 2022
+  },
+  {
+    "key": "eicudemo",
+    "doi": "10.13026/4mxk-na84",
+    "title": "eICU Collaborative Research Database Demo",
+    "year": 2021,
+    "metadata_source": "https://api.datacite.org/dois/10.13026/4mxk-na84",
+    "status": "verified",
+    "note": "Version-specific dataset citation checked against PhysioNet.",
+    "dataset_source": "https://physionet.org/content/eicu-crd-demo/2.0.1/"
+  },
+  {
+    "key": "yaib",
+    "title": "Yet Another ICU Benchmark: A Flexible Multi-Center Framework for Clinical ML",
+    "year": 2024,
+    "metadata_source": "https://arxiv.org/abs/2306.05109",
+    "proceedings_source": "https://openreview.net/forum?id=ox2ATRM90I",
+    "status": "verified",
+    "note": "ICLR 2024; six authors verified against primary arXiv record."
+  }
+]

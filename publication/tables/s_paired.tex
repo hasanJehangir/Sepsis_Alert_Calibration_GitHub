@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
+\caption{Exploratory three-of-five minus hourly differences at local-10\% targets.}\label{tab:spair}
+\begin{tabular}{llrr}
+\toprule
+Transfer & Endpoint & Difference & Paired 95\% interval \\
+\midrule
+A$\to$B & First6 & +2.60 & [-0.65, +6.49] \\
+A$\to$B & Any6 & +0.65 & [-3.25, +4.55] \\
+A$\to$B & Emissions/admission & +0.30 & [+0.25, +0.35] \\
+B$\to$A & First6 & -2.31 & [-5.00, +0.38] \\
+B$\to$A & Any6 & +1.54 & [-1.92, +5.00] \\
+B$\to$A & Emissions/admission & +0.34 & [+0.29, +0.40] \\
+\bottomrule
+\end{tabular}
+\par\vspace{3pt}\begin{minipage}{\linewidth}\footnotesize Sensitivity differences are percentage points; emission differences are counts per nonseptic admission. Intervals use 2,000 paired admission bootstrap draws and condition on fitted models and thresholds.\end{minipage}
+\end{table}
