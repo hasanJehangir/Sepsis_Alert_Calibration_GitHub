@@ -1,0 +1,11 @@
+{
+  "status": "PREPARED_FOR_HUMAN_REVIEW_NOT_REVIEWED",
+  "people": 57,
+  "test_cases_included": 17,
+  "test_negative_sample": 40,
+  "negative_sampling": "smallest SHA256(20261001|review|cohort_id); no selection by model scores",
+  "review_fields_populated": false,
+  "clinical_adjudication_completed": false,
+  "human_review_completed": false,
+  "case_material_limit": "Pre-onset predictor timelines only; no full infection/SOFA evidence or source EHR. Not sufficient for clinical sepsis adjudication."
+}

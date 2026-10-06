@@ -1,0 +1,9 @@
+{
+  "official_page_demo_hospitals_description": 20,
+  "raw_patient_rows": 2520,
+  "raw_patient_hospital_surrogates": 186,
+  "hospital_table_surrogates": 186,
+  "patient_rows_missing_hospital_join": 0,
+  "official_raw_checksums_verified": true,
+  "resolution": "Unresolved discrepancy between overview description and released surrogate-ID counts; do not claim a verified clinical hospital count."
+}

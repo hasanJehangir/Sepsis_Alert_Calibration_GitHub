@@ -1,0 +1,30 @@
+{
+  "status": "EXTERNAL_PUBLIC_DEMO_EVALUATION_COMPLETED",
+  "completed_at_utc": "2026-09-30T21:31:40.936503+00:00",
+  "verified_hospital_patient_independence": false,
+  "clinical_validation_completed": false,
+  "human_review_completed": false,
+  "eligible_people": 656,
+  "scoring_hours": 28045,
+  "policy_rows": 180,
+  "discrimination_rows": 12,
+  "label_definition_differs_from_challenge": true,
+  "input_units_require_review": [
+    "Lactate",
+    "Magnesium"
+  ],
+  "source_models_refitted": false,
+  "external_lock_sha256": "f729eda277f5372e8495103b9480d37fb1cdc09afcdab94b7a5388a0bdeb1a96",
+  "runner_sha256": "29b7dbd5fab87bea8108343d221e7dde3956e0482f4afb1008d5dcf7b0711303",
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3",
+    "pyarrow": "21.0.0"
+  },
+  "frozen_input_hashes_unchanged": true,
+  "role_person_overlap": 0
+}

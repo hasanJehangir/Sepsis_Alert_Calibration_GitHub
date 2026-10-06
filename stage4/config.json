@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "seed": 20261001,
+  "calibration_fraction": 0.3,
+  "maximum_hour": 168,
+  "minimum_scoring_hour": 6,
+  "alpha": 0.1,
+  "sources": ["A", "B"],
+  "models": ["logistic", "hgb", "hgb_no_observation_features"],
+  "conditions": ["source_hourly", "source_patient", "local_patient"],
+  "policies": ["hourly", "single", "silence4", "silence6", "three_of_five"],
+  "input_variants": ["native_numeric", "mask_ambiguous_units"],
+  "verified_hospital_patient_independence": false,
+  "human_review_completed": false,
+  "target_definition": "published_YAIB_modified_sep3_alt_eicu_demo",
+  "label_onset_shift_hours": 6
+}

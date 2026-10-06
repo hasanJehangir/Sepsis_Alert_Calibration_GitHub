@@ -1,0 +1,89 @@
+{
+  "yaib_commit": "0d1d39a131a65f453aeb019828394396d6bfd171",
+  "files": [
+    {
+      "file": "yaib/dyn.parquet",
+      "url": "https://raw.githubusercontent.com/rvandewater/YAIB/0d1d39a131a65f453aeb019828394396d6bfd171/demo_data/sepsis/eicu_demo/dyn.parquet",
+      "bytes": 491381,
+      "sha256": "1e3a4e4312377bea688181681dc8eb196dc4518336bf231b90c55bab74d6c075"
+    },
+    {
+      "file": "yaib/sta.parquet",
+      "url": "https://raw.githubusercontent.com/rvandewater/YAIB/0d1d39a131a65f453aeb019828394396d6bfd171/demo_data/sepsis/eicu_demo/sta.parquet",
+      "bytes": 14467,
+      "sha256": "4e11fe8576ff38ba5cd64a809012c08f5e275eb057ad263b13ac3a37b72b2ecc"
+    },
+    {
+      "file": "yaib/outc.parquet",
+      "url": "https://raw.githubusercontent.com/rvandewater/YAIB/0d1d39a131a65f453aeb019828394396d6bfd171/demo_data/sepsis/eicu_demo/outc.parquet",
+      "bytes": 15958,
+      "sha256": "9f3dbe94ad534df410f0ecdab8a874aba720c6fef6f4492b64b7879426d7c6f4"
+    },
+    {
+      "file": "yaib/attrition.csv",
+      "url": "https://raw.githubusercontent.com/rvandewater/YAIB/0d1d39a131a65f453aeb019828394396d6bfd171/demo_data/sepsis/eicu_demo/attrition.csv",
+      "bytes": 54,
+      "sha256": "66cd00e762f1ba0d861a740c52209a5d698f1d86c162f6fbea0f59f56a5b1f77"
+    },
+    {
+      "file": "eicu/patient.csv.gz",
+      "url": "https://physionet.org/files/eicu-crd-demo/2.0.1/patient.csv.gz",
+      "bytes": 136791,
+      "sha256": "15e1eb52169828e3cfff3b67132a087298de4d0365bbb31bb294f6043bffd474"
+    },
+    {
+      "file": "eicu/hospital.csv.gz",
+      "url": "https://physionet.org/files/eicu-crd-demo/2.0.1/hospital.csv.gz",
+      "bytes": 759,
+      "sha256": "4ed356f9c4e7c8ce80e89241697e94b77f21c2f325cd6ad126794b1e92805ef4"
+    },
+    {
+      "file": "eicu/SHA256SUMS.txt",
+      "url": "https://physionet.org/files/eicu-crd-demo/2.0.1/SHA256SUMS.txt",
+      "bytes": 2805,
+      "sha256": "eadde92e7e73248ce1c70e99fa8499c61c7239d6e7b32d1b4cf4746814870e21"
+    },
+    {
+      "file": "eicu/LICENSE.txt",
+      "url": "https://physionet.org/files/eicu-crd-demo/2.0.1/LICENSE.txt",
+      "bytes": 25815,
+      "sha256": "bcdfcd4f31c790e30fb645dc36414907172405897adff329ad379eed85d12017"
+    },
+    {
+      "file": "eicu/lab.csv.gz",
+      "url": "https://physionet.org/files/eicu-crd-demo/2.0.1/lab.csv.gz",
+      "bytes": 5729763,
+      "sha256": "e06852850abeb65211bc22ac43f17121ba41b14656fac862396449af84d8273a"
+    },
+    {
+      "file": "eicu/vitalPeriodic.csv.gz",
+      "url": "https://physionet.org/files/eicu-crd-demo/2.0.1/vitalPeriodic.csv.gz",
+      "bytes": 19391070,
+      "sha256": "04dc093a2e77cd4c52ac7f2a47a8356fbb7456c7f15deb20d5abb1ca4303231d"
+    },
+    {
+      "file": "eicu/vitalAperiodic.csv.gz",
+      "url": "https://physionet.org/files/eicu-crd-demo/2.0.1/vitalAperiodic.csv.gz",
+      "bytes": 2619980,
+      "sha256": "c294f46647990cb648b3ebfa589e83f330bdc0c2c922b5e8f23aa0ef99954635"
+    },
+    {
+      "file": "yaib/LICENSE_CODE_MIT.txt",
+      "url": "https://raw.githubusercontent.com/rvandewater/YAIB/0d1d39a131a65f453aeb019828394396d6bfd171/LICENSE",
+      "bytes": 1189,
+      "sha256": "a750acfb1485ef3dc763017bc5ac767d6b99df4cf5ef756aae60354cf28a3bf5"
+    },
+    {
+      "file": "eicu/nurseCharting.csv.gz",
+      "url": "https://physionet.org/files/eicu-crd-demo/2.0.1/nurseCharting.csv.gz",
+      "bytes": 16838725,
+      "sha256": "475000d63d4ef883b2e891d7197997201300bedc13fcf23e67add1abee11dafe"
+    },
+    {
+      "file": "eicu/respiratoryCharting.csv.gz",
+      "url": "https://physionet.org/files/eicu-crd-demo/2.0.1/respiratoryCharting.csv.gz",
+      "bytes": 1630167,
+      "sha256": "21bfe647fea0a229d09ff04c775ec4270d20ae084131a987943da836df534235"
+    }
+  ]
+}
