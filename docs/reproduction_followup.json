@@ -1,0 +1,25 @@
+{
+  "stage": "followup",
+  "completed_at_utc": "2026-10-06T18:00:38.230664+00:00",
+  "status": "REPRODUCED_EXACTLY",
+  "comparisons": [
+    {
+      "file": "stage3/results/policy_metrics.csv",
+      "exact_dataframe_match": true
+    },
+    {
+      "file": "stage3/results/cross_hospital_local10.csv",
+      "exact_dataframe_match": true
+    },
+    {
+      "file": "stage3/results/paired_policy_differences.csv",
+      "exact_dataframe_match": true
+    },
+    {
+      "file": "stage3/results/invariance_audit.csv",
+      "exact_dataframe_match": true
+    }
+  ],
+  "archived_outputs_overwritten": false,
+  "clinical_validation_claimed": false
+}

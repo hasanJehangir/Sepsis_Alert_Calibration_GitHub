@@ -1,0 +1,39 @@
+{
+  "status": "EXPLORATORY_FOLLOWUP_COMPLETED",
+  "completed_at_utc": "2026-09-30T19:43:30.462140+00:00",
+  "test_outcomes_already_examined": true,
+  "external_validation_completed": false,
+  "clinical_validation": false,
+  "policy_rows": 660,
+  "paired_endpoint_rows": 144,
+  "prior_signature": "b872b7e59718f987cfe7387cb930d67f842934872445cee9ffb91569c1a1f92d",
+  "followup_lock_sha256": "186b5ee9be39fc321059054201e3c7d5125dd2801a21af7380f04ef4b7e6938a",
+  "runner_sha256": "68450bdbd34ea96be3ea9335ab15d8828ad566a7b2c6024fe22afb6036a50c02",
+  "lock": {
+    "created_at_utc": "2026-09-30T19:35:42.092647+00:00",
+    "stage2_test_outcomes_already_examined": true,
+    "public_preregistration": false,
+    "protocol_sha256": "62e80d966106bb7908b02d1a2cb778d3c572f2e489224ffadc6067e92b67925c",
+    "config_sha256": "8634fa52bfe2ba6dcf73dfcb075a6583bd75419e8e066246d51ad69ac3564750",
+    "inputs": {
+      "stage2/cache/hours.npy": "343600b107008f7f6a02fd621d0c9eeb804780166a86b2a89d45ab796fb01881",
+      "stage2/results/cohort.csv": "09a7d53032f223c6f750f61f6c98abe2981b922215929e637135c18c0e02115e",
+      "stage2/results/main_metrics.csv": "adcfb82fbbe8a1ffae4b6d59a94f7657686b9f23d52416863357caca0583b755",
+      "stage2/results/completed.json": "78bc368ec90a502fb0a60565ebb7a4a5d1958ad59a8728c0a41064ca9359336f",
+      "stage2/results/A_hgb_no_observation_features_predictions.npz": "8966b0d61afe8223115d86679a75b07cbe56d37cfb1b50f1cddc138f258b67ff",
+      "stage2/results/A_hgb_predictions.npz": "8f79245b0fed6d0c3c43c94ee970b5990bc32501ee41c0a6fc86313223f6efa6",
+      "stage2/results/A_logistic_predictions.npz": "e51edd9d1e7b4b0cc1720505cc4e802011fee8c2ea4f4ac8a6fece5ebc4c1dc8",
+      "stage2/results/B_hgb_no_observation_features_predictions.npz": "a973aa141a1e395fcf0ab8c06ea9861a066c36d23f2418887b4e45125a05057d",
+      "stage2/results/B_hgb_predictions.npz": "234fa4ae675b17478f45e8c3739239fa185acec1ccabbbc3962c3e37529fb4dd",
+      "stage2/results/B_logistic_predictions.npz": "e976a716b0abaf0ea9148be805b17f18b49f3463ac2a3370fdd4d1b4111425a8"
+    }
+  },
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0"
+  },
+  "python": "3.12.14",
+  "elapsed_seconds": 19.439781665802002,
+  "invariance_and_stage2_anchor_checks_passed": true
+}

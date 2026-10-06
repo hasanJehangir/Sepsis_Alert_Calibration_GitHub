@@ -1,0 +1,309 @@
+{
+  "stage": "external",
+  "completed_at_utc": "2026-10-06T18:00:45.825975+00:00",
+  "status": "REPRODUCED_EXACTLY",
+  "comparisons": [
+    {
+      "run": "initial",
+      "file": "external_policy_metrics.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "external_discrimination.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "external_cohort.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "external_counts.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "feature_availability.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "channel_mapping_audit.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "external_exclusions.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "label_window_audit.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "outcome_blind_people_selection.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "A_hgb_mask_ambiguous_units_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "A_hgb_native_numeric_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "A_hgb_no_observation_features_mask_ambiguous_units_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "A_hgb_no_observation_features_native_numeric_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "A_logistic_mask_ambiguous_units_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "A_logistic_native_numeric_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "B_hgb_mask_ambiguous_units_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "B_hgb_native_numeric_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "B_hgb_no_observation_features_mask_ambiguous_units_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "B_hgb_no_observation_features_native_numeric_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "B_logistic_mask_ambiguous_units_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "B_logistic_native_numeric_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "external_hours.npy",
+      "comparison": "exact array match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "external_labels.npy",
+      "comparison": "exact array match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "native_numeric_features.npy",
+      "comparison": "exact array match",
+      "passed": true
+    },
+    {
+      "run": "initial",
+      "file": "mask_ambiguous_units_features.npy",
+      "comparison": "exact array match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "external_policy_metrics.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "external_discrimination.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "external_cohort.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "external_counts.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "feature_availability.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "channel_mapping_audit.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "external_exclusions.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "label_window_audit.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "outcome_blind_people_selection.csv",
+      "comparison": "exact dataframe match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "A_hgb_mask_ambiguous_units_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "A_hgb_native_numeric_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "A_hgb_no_observation_features_mask_ambiguous_units_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "A_hgb_no_observation_features_native_numeric_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "A_logistic_mask_ambiguous_units_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "A_logistic_native_numeric_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "B_hgb_mask_ambiguous_units_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "B_hgb_native_numeric_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "B_hgb_no_observation_features_mask_ambiguous_units_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "B_hgb_no_observation_features_native_numeric_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "B_logistic_mask_ambiguous_units_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "B_logistic_native_numeric_predictions.npz",
+      "comparison": "exact prediction-vector match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "external_hours.npy",
+      "comparison": "exact array match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "external_labels.npy",
+      "comparison": "exact array match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "native_numeric_features.npy",
+      "comparison": "exact array match",
+      "passed": true
+    },
+    {
+      "run": "amended",
+      "file": "mask_ambiguous_units_features.npy",
+      "comparison": "exact array match",
+      "passed": true
+    }
+  ],
+  "archived_outputs_overwritten": false,
+  "clinical_validation_claimed": false
+}
