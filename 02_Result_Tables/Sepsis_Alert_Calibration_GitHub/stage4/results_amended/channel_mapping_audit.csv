@@ -1,0 +1,44 @@
+table,source,channel,rows,unit_rejections,expected_system_unit,multiplier
+vitalPeriodic,heartrate,HR,435885,0,,
+vitalPeriodic,sao2,O2Sat,392459,0,,
+vitalPeriodic,temperature,Temp,7520,0,,
+vitalPeriodic,systemicsystolic,SBP,68594,0,,
+vitalPeriodic,systemicmean,MAP,68800,0,,
+vitalPeriodic,systemicdiastolic,DBP,68594,0,,
+vitalPeriodic,respiration,Resp,389639,0,,
+vitalPeriodic,etco2,EtCO2,17988,0,,
+vitalAperiodic,noninvasivesystolic,SBP,64836,0,,
+vitalAperiodic,noninvasivemean,MAP,65154,0,,
+vitalAperiodic,noninvasivediastolic,DBP,64839,0,,
+lab,Base Excess,BaseExcess,751,0,mEq/L,1.0
+lab,Base Deficit,BaseExcess,167,0,mEq/L,-1.0
+lab,HCO3,HCO3,934,0,mmol/L,1.0
+lab,FiO2,FiO2,784,0,%,1.0
+lab,pH,pH,977,0,,1.0
+lab,paCO2,PaCO2,989,0,mm Hg,1.0
+lab,O2 Sat (%),SaO2,801,0,%,1.0
+lab,AST (SGOT),AST,1630,0,Units/L,1.0
+lab,BUN,BUN,4241,0,mg/dL,1.0
+lab,alkaline phos.,Alkalinephos,1595,0,Units/L,1.0
+lab,calcium,Calcium,4123,0,mg/dL,1.0
+lab,chloride,Chloride,4325,0,mmol/L,1.0
+lab,creatinine,Creatinine,4272,0,mg/dL,1.0
+lab,direct bilirubin,Bilirubin_direct,181,0,mg/dL,1.0
+lab,glucose,Glucose,4420,0,mg/dL,1.0
+lab,lactate,Lactate,572,0,mmol/L,1.0
+lab,magnesium,Magnesium,2086,0,mg/dL,1.0
+lab,phosphate,Phosphate,1322,0,mg/dL,1.0
+lab,potassium,Potassium,4821,0,mmol/L,1.0
+lab,total bilirubin,Bilirubin_total,1605,0,mg/dL,1.0
+lab,troponin - I,TroponinI,518,0,ng/mL,1.0
+lab,Hct,Hct,4195,0,%,1.0
+lab,Hgb,Hgb,4427,0,g/dL,1.0
+lab,PTT,PTT,699,0,sec,1.0
+lab,WBC x 1000,WBC,3669,0,K/mcL,1.0
+lab,fibrinogen,Fibrinogen,75,0,mg/dL,1.0
+lab,platelets x 1000,Platelets,3690,0,K/mcL,1.0
+nurseCharting,Temperature (C),Temp,16944,0,,
+nurseCharting,Temperature (F),Temp,16945,0,,
+respiratoryCharting,FiO2,FiO2,10173,0,,
+respiratoryCharting,FIO2 (%),FiO2,381,0,,
+respiratoryCharting,Set Fraction of Inspired Oxygen (FIO2),FiO2,0,0,,

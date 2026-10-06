@@ -1,0 +1,58 @@
+review_id,stay_id,age,gender,unittype,apacheadmissiondx,record_hours
+R001,972877,60,Female,CSICU,Diabetic hyperglycemic hyperosmolar nonketotic coma (HHNC),34
+R002,969631,76,Male,Cardiac ICU,"Thrombus, arterial",68
+R003,1790816,77,Male,Med-Surg ICU,"Angina, unstable (angina interferes w/quality of life or meds are tolerated poorly)",25
+R004,2906477,54,Male,Neuro ICU,"Hemorrhage/hematoma, intracranial",85
+R005,1073984,47,Female,MICU,"GI medical, other",56
+R006,1692067,56,Male,Cardiac ICU,"ARDS-adult respiratory distress syndrome, non-cardiogenic pulmonary edema",46
+R007,1768638,68,Female,Med-Surg ICU,"Cancer, other GI",22
+R008,2399157,62,Female,Med-Surg ICU,"Hypertension, uncontrolled (for cerebrovascular accident-see Neurological System)",36
+R009,294032,61,Male,Med-Surg ICU,"Sepsis, pulmonary",66
+R010,976782,68,Female,Neuro ICU,"Rhythm disturbance (atrial, supraventricular)",50
+R011,1835048,67,Male,Med-Surg ICU,Hypoglycemia,42
+R012,145427,61,Male,SICU,"GI perforation/rupture, surgery for",22
+R013,1849124,75,Male,Med-Surg ICU,"CABG alone, coronary artery bypass grafting",37
+R014,1794248,41,Female,MICU,Seizures (primary-no structural brain disease),88
+R015,3115052,75,Female,SICU,Thoracotomy for lung cancer,22
+R016,1073098,80,Female,SICU,"Sepsis, pulmonary",34
+R017,1568171,84,Male,MICU,"CHF, congestive heart failure",74
+R018,1062496,60,Female,CTICU,Renal infection/abscess,168
+R019,1810300,66,Male,Med-Surg ICU,"Hypovolemia (including dehydration, Do not include shock states)",29
+R020,1772933,81,Male,Med-Surg ICU,"Bleeding, upper GI",80
+R021,913057,89,Female,Med-Surg ICU,"Bleeding, lower GI",112
+R022,2361839,77,Female,Med-Surg ICU,"CHF, congestive heart failure",33
+R023,1746313,> 89,Female,MICU,Atelectasis,100
+R024,2371837,76,Female,Med-Surg ICU,Diabetic ketoacidosis,20
+R025,1823356,36,Male,MICU,Diabetic ketoacidosis,38
+R026,1708886,34,Male,Neuro ICU,"Neurologic medical, other",22
+R027,963136,65,Female,Med-Surg ICU,"Sepsis, pulmonary",64
+R028,1725431,69,Male,Med-Surg ICU,"CVA, cerebrovascular accident/stroke",17
+R029,1093888,78,Male,Med-Surg ICU,"Sepsis, pulmonary",72
+R030,1802488,55,Female,Med-Surg ICU,Asthma,18
+R031,535166,63,Male,Med-Surg ICU,"Hematoma, subdural",17
+R032,1290999,31,Female,Med-Surg ICU,"Pneumonia, viral",62
+R033,906947,61,Female,Med-Surg ICU,Acid-base/electrolyte disturbance,13
+R034,1117947,79,Male,Med-Surg ICU,"Pneumonia, other",21
+R035,1813166,84,Male,SICU,"GI obstruction, surgery for (including lysis of adhesions)",99
+R036,946276,80,Male,Med-Surg ICU,"Hypertension, uncontrolled (for cerebrovascular accident-see Neurological System)",17
+R037,211715,53,Female,Med-Surg ICU,Thoracotomy for pleural disease,39
+R038,1557515,73,Male,Cardiac ICU,"Cholecystectomy/cholangitis, surgery for (gallbladder removal)",20
+R039,1131143,78,Female,Med-Surg ICU,Head/spinal trauma,68
+R040,2192095,69,Male,CSICU,"Pneumonia, aspiration",21
+R041,250073,58,Male,Med-Surg ICU,"Neoplasm-cranial, surgery for (excluding transphenoidal)",54
+R042,2325386,60,Female,Med-Surg ICU,"CHF, congestive heart failure",27
+R043,608373,57,Male,Med-Surg ICU,,54
+R044,1111686,78,Male,Med-Surg ICU,"Pneumonia, bacterial",75
+R045,1821939,80,Female,Med-Surg ICU,"CVA, cerebrovascular accident/stroke",53
+R046,2473922,73,Female,Med-Surg ICU,"Trauma medical, other",20
+R047,1059533,67,Female,MICU,"Sepsis, unknown",23
+R048,542874,41,Female,Med-Surg ICU,"Arrest, respiratory (without cardiac arrest)",15
+R049,2521021,72,Female,Med-Surg ICU,Emphysema/bronchitis,9
+R050,2091118,70,Male,Med-Surg ICU,"Obstruction due to nephrolithiasis, surgery for (with or without ileal-conduit)",12
+R051,1602040,56,Male,CCU-CTICU,"Infarction, acute myocardial (MI)",19
+R052,163524,38,Female,Med-Surg ICU,"Overdose, street drugs (opiates, cocaine, amphetamine)",23
+R053,1314510,34,Male,Neuro ICU,Extremity/multiple trauma,6
+R054,1058166,50,Male,CTICU,Aortic valve replacement (isolated),50
+R055,3130379,41,Female,Med-Surg ICU,"Respiratory - medical, other",100
+R056,1588177,> 89,Female,Cardiac ICU,Hypoglycemia,17
+R057,186085,58,Male,SICU,"Embolus, pulmonary",33

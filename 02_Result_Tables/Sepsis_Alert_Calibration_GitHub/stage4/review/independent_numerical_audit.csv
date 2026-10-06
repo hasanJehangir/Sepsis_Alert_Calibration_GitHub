@@ -1,0 +1,18 @@
+file,check,rows_checked,passed
+stage2/results/main_metrics.csv,patient_false_alert_rate proportion and exact interval,288,True
+stage2/results/main_metrics.csv,window6_sensitivity proportion and exact interval,288,True
+stage2/results/main_metrics.csv,first6_sensitivity proportion and exact interval,288,True
+stage2/results/main_metrics.csv,early_first_fraction proportion and exact interval,288,True
+stage2/results/main_metrics.csv,window12_sensitivity proportion and exact interval,288,True
+stage2/results/main_metrics.csv,first12_sensitivity proportion and exact interval,288,True
+stage2/results/main_metrics.csv,any_positive_alert_fraction proportion and exact interval,288,True
+stage3/results/policy_metrics.csv,patient_false_alert_rate proportion and exact interval,660,True
+stage3/results/policy_metrics.csv,window6_sensitivity proportion and exact interval,660,True
+stage3/results/policy_metrics.csv,first6_sensitivity proportion and exact interval,660,True
+stage3/results/policy_metrics.csv,early_first_fraction proportion and exact interval,660,True
+stage3/results/policy_metrics.csv,window12_sensitivity proportion and exact interval,660,True
+stage3/results/policy_metrics.csv,first12_sensitivity proportion and exact interval,660,True
+stage3/results/policy_metrics.csv,any_positive_alert_fraction proportion and exact interval,660,True
+stage2/results/cohort.csv,"unique raw hashes, identifiers, contiguous scoring offsets",36658,True
+stage2/cache/hours.npy,"scoring starts at >=6, no gaps, cases strictly before reconstructed onset",1254335,True
+stage3/results/policy_metrics.csv,frozen hourly anchors match locked analysis,48,True

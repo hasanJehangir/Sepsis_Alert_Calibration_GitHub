@@ -1,0 +1,7 @@
+site,role,patients,sepsis
+A,calibration,3693,271
+A,test,3682,260
+A,train,11113,778
+B,calibration,3636,141
+B,test,3627,154
+B,train,10907,457

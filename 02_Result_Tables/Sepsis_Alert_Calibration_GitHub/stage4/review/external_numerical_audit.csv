@@ -1,0 +1,28 @@
+run,check,rows_checked,passed
+results,patient_false_alert_rate counts/proportions/exact intervals,180,True
+results,window6_sensitivity counts/proportions/exact intervals,180,True
+results,first6_sensitivity counts/proportions/exact intervals,180,True
+results,early_first_fraction counts/proportions/exact intervals,180,True
+results,window12_sensitivity counts/proportions/exact intervals,180,True
+results,first12_sensitivity counts/proportions/exact intervals,180,True
+results,any_positive_alert_fraction counts/proportions/exact intervals,180,True
+results,first-alert and admission invariants for single/silence rules,36,True
+results,"unique people, disjoint roles, contiguous pre-onset scoring",656,True
+results_amended,patient_false_alert_rate counts/proportions/exact intervals,180,True
+results_amended,window6_sensitivity counts/proportions/exact intervals,180,True
+results_amended,first6_sensitivity counts/proportions/exact intervals,180,True
+results_amended,early_first_fraction counts/proportions/exact intervals,180,True
+results_amended,window12_sensitivity counts/proportions/exact intervals,180,True
+results_amended,first12_sensitivity counts/proportions/exact intervals,180,True
+results_amended,any_positive_alert_fraction counts/proportions/exact intervals,180,True
+results_amended,first-alert and admission invariants for single/silence rules,36,True
+results_amended,"unique people, disjoint roles, contiguous pre-onset scoring",656,True
+both,unchanged external_cohort.csv,1,True
+both,unchanged external_counts.csv,1,True
+both,unchanged outcome_blind_people_selection.csv,1,True
+both,unchanged external_hours.npy,1,True
+both,unchanged external_labels.npy,1,True
+both,unchanged external_exclusions.csv,1,True
+both,unchanged label_window_audit.csv,1,True
+external_lock.json,frozen input and runner hashes unchanged,28,True
+external_amended_lock.json,frozen input and runner hashes unchanged,35,True
